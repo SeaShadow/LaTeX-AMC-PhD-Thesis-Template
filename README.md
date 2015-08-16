@@ -296,9 +296,9 @@ Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, 
 ```
 
 Examples for subsections can be found in:
-* `\Chapters\Chapter2\sect21.tex`
-* `\Chapters\Chapter2\sect22.tex`
-* `\Chapters\Chapter2\sect23.tex`
+* `\Chapters\Chapter2\sect21.tex` showing subsections 2.1.1, 2.1.2, and 2.1.3
+* `\Chapters\Chapter2\sect22.tex` showing subsections 2.2.1, 2.2.2, and 2.2.3
+* `\Chapters\Chapter2\sect23.tex` showing subsections 2.3.1, 2.3.2, and 2.3.3
 
 ### Update Nomenclature, BibTeX Database and Indexes
 
