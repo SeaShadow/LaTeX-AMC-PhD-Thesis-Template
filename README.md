@@ -386,6 +386,15 @@ The inclusion of the chapter title in the table of contents (TOC) is handled usi
 \label{nomenclature}
 ```
 
+####Change Title of References/Bibliography
+
+The default header title used in the thesis template is __References/Bibliography__. This can be changed in `prelude.tex` by changing the title in the following code bit:
+
+```latex
+% Bibliography Title
+\renewcommand{\bibname}{References/Bibliography}
+```
+
 ####Basic steps to create an index for the document
 
 The following index configuration details have already been included in the presented template (see `Packages/mathphdthesis.sty`).
