@@ -32,7 +32,7 @@ The following LaTeX packages have to be installed for the thesis template to wor
 * [tocbibind](https://www.ctan.org/pkg/tocbibind) to add bibliography/index/contents to Table of Contents (TOC)
 * [xcolor](https://www.ctan.org/pkg/xcolor) for driver-independent color extensions for LaTeX and pdfLaTeX
 
-All above mentioned LaTeX packages are available for download on the Comprehensive TeX Archive Network (CTAN), but packages can also be installed by using package managers included in TeX environments such as MikTeX [package manager](http://docs.miktex.org/2.9/manual/pkgmgt.html).
+All above mentioned LaTeX packages are available for download on the Comprehensive TeX Archive Network (CTAN), but packages can also be installed by using package managers included in TeX environments such as the MikTeX [package manager](http://docs.miktex.org/2.9/manual/pkgmgt.html).
 
 ### Test BareBone Version of Template
 
