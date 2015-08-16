@@ -180,7 +180,7 @@ To customise it for you personally, the file that you will need to edit is `prel
 
 To edit text change the content between the __{}__ braces. 
 
-To enable/disable certain parts of the template check the variables at the very top of the `prelude.tex` file. 
+To enable/disable parts of the template (i.e. copyright page, list of tables, list of figures, etc.) use the variables stated at the very top of the `prelude.tex` file. 
 
 ```latex
 \titlepgtrue	     % Main title page (required)
