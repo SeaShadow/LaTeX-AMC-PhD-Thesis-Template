@@ -1,2 +1,381 @@
-# LaTeX-AMC-PhD-Thesis-Template
-LaTeX document for Australian Maritime College, National Centre for Maritime Engineering &amp; Hydrodynamics (NCMEH) PhD thesis where AMC is a specialised department of the University of Tasmania (UTas).
+## LaTeX-AMC-PhD-Thesis
+
+LaTeX document for University of Tasmania (UTas) PhD thesis which is based on the [LaTeX-AMC-PhD-Template](https://github.com/SeaShadow/LaTeX-AMC-PhD-Template).
+
+### Source template (Credit)
+
+The LaTeX template is based on [University of Tasmania Mathematics Style File and Thesis Template for LaTeX2e](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan.
+
+Template has been adjusted to fit the thesis guidelines of the Department of Engineering published by the University of Tasmania (UTas).
+
+### Required packages
+
+The following LaTeX packages have to be installed:
+
+* `graphicx` for graphics manipulation
+* `makeidx` for generating the index
+* `fancyhdr` for nice headers and footers.
+* `tocbibind` for adding table of contents entries for bibliography, index etc.
+* `sectsty` for generating stylised chapter and section headings.
+* `lipsum` for generating dummy text.
+* `natbib` and `har2nat` for BibTeX citations.
+* `xcolor` color package.
+* `epstopdf` EPS to PDF conversion.
+
+### Test BareBone Version of Template
+
+First steps:
+
+* Download and install [MiKTeX](http://miktex.org/)
+* Download/clone __LaTeX-AMC-PhD-Thesis__ repository
+
+The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `{path}\LaTeX-AMC-PhD-Thesis Repository`):
+
+__>>__ Run LaTeX on thesis.tex:
+```
+$ latex thesis.tex
+```
+__>>__ Run BibTeX on thesis.tex:
+```
+$ bibtex thesis
+```
+__>>__ Run MakeIndex on thesis.idx (note the different file extension):
+```
+$ makeindex thesis
+```
+__>>__ Run LaTeX again on thesis.tex:
+```
+$ latex thesis
+```
+__>>__ Run LaTeX once more on thesis.tex:
+```
+$ latex thesis
+```
+
+For easier creation of the template use a LaTeX editor such as Texmaker, TeXstudio, TeXnicCenter or LyX (see Required Software below).
+
+### LaTeX File Structure
+
+The breakdown of the LaTeX file structure is as follows:
+
+```
++--- Admin
++--- Appendices
+¦       app0.tex
+¦       app1.tex
+¦       app2.tex
+¦       app3.tex
+¦       app4.tex
+¦       ...
++--- Chapters
+¦       chap1.tex
+¦       chap2.tex
+¦       chap3.tex
+¦       chap4.tex
+¦       ...
++--- Figures
++--- Frontbackmatter
+¦       index.tex
+¦       newcom.tex
+¦       prelude.tex
++--- Nomenclature
+¦       nomenclature.tex
++--- Packages
+¦       mathphdthesis.sty
+¦       sectsty.sty
+¦       tocbibind.sty
++--- References
+¦       thesis.bib
++--- Templates
+¦        appendix.tex
+¦        chapter.tex
+¦   biby.tex
+¦   index.tex
+¦   LICENSE
+¦   README.md
+¦   thesis.pdf
+¦   thesis.tex 
+```
+
+Where content of folders are as follows:
+
+| Folder name         | Folder contents                                             |
+| ------------------- | ----------------------------------------------------------- |
+| __Admin__           | Thesis guideline documents, etc.                            |
+| __Appendices__      | Thesis appendices, each in its separate `appX.tex` file.    |
+| __Chapters__        | Thesis chapters, each in its separate `chapX.tex` file.     |
+| __Figures__         | Figures, plots, etc. as PDF or EPS files.                   |
+| __Frontbackmatter__ | Prelude, abstract, acknowledgements, etc.                   |
+| __Packages__        | Style (`*.sty`) files and custom LaTeX packages.            |
+| __References__      | BibTeX (`*.bib`) database file as referenced in `biby.tex`. |
+| __Templates__       | Example appendix and chapter LaTeX template.                |
+
+### Customise the Template
+
+To customise it for you personally, the file that you will need to edit is `prelude.tex`. If you have a look in this file you will see the following lines:
+
+```latex
+\title{PLACE THESIS TITLE HERE}     % Use all capital letters
+\author{Your Name} 				    % Use mixed upper & lower case
+\prevdegrees{B.A. B.Sc. Hons (Qld)} % Used to specify your previous degrees...use mixed upper & lower case
+\advisor{Dr John Doe}               % Advisers and supervisors
+\dept{Mathematics}                  % Your academic department
+\submitdate{August, 2004}           % Month & year of your thesis submission
+```
+
+To edit text change the content between the __{}__ braces. Now look at the very top of the file `prelude.tex`. 
+
+In the `prelude.tex` you'll see a lot of commands with `true` contained at the end of the command name. 
+
+```latex
+\titlepgtrue	     % Main title page (required)
+\signaturepagetrue   % Page for declaration of originality (required)
+\copyrighttrue 		 % Copyright page (required)
+\abswithesistrue 	 % Abstract to be bound with thesis (optional)
+\acktrue 			 % Acknowledgements page (optional)
+\tablecontentstrue 	 % Table of contents page (required)
+\tablespagetrue 	 % Table of contents page for tables (required only if you have tables)
+\figurespagetrue 	 % Table of contents page for figures (required only if you have figures)
+```
+ 
+These are flags that specify which elements of the preface 
+you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
+the `true` to `false` at the end of the command name. 
+
+#### Adding new Chapters and Appendices
+
+To create new chapters and appendices:
+
+* __For a new Appendix:__ Create a new `appX.tex` file in __Appendices__ folder where __X__ stands for the appendix number (e.g. `app5.tex` or `app6.tex`).
+* __For a new Chapter:__ Create a new `chapX.tex` file in __Chapters__ folder where __X__ stands for the chapter number (e.g. `chap5.tex` or `chap6.tex`).
+
+For a basic section, subsection structure of the new chapter or appendix the example template files `chapter.tex` and `appendix.tex`, located in the __Templates__, can be used.
+
+Then open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
+
+```latex
+\includeonly{
+Frontbackmatter/prelude 	% Contains all the relevant candidate information (name, degrees, abstract etc)
+,Frontbackmatter/newcom 	% Place all you new commands in here
+,Nomenclature/nomenclature  % The nomenclature chapter
+,Chapters/chap1  			% The first chapter
+,Chapters/chap2  			% The second chapter
+,Chapters/chap3  			% The third chapter
+,Chapters/chap4  			% The fourth chapter
+,Appendices/app0   			% Needed to switch to appendix mode
+,Appendices/app1   			% The first appendix
+,Appendices/app2   			% The second appendix
+,Appendices/app3   			% The third appendix
+,Appendices/app4   			% The fourth appendix
+,biby  					 	% Makes the bibliography from the BibTeX database
+,index  					% Places the index in the thesis
+}
+```
+
+as well as in:
+
+```latex
+% Include all the pieces of your thesis in here.
+\include{Frontbackmatter/prelude}
+\include{Frontbackmatter/newcom}
+\include{Nomenclature/nomenclature}
+\include{Chapters/chap1}
+\include{Chapters/chap2}
+\include{Chapters/chap3}
+\include{Chapters/chap4}
+\include{Appendices/app0}
+\include{Appendices/app1}
+\include{Appendices/app2}
+\include{Appendices/app3}
+\include{Appendices/app4}
+\include{biby}
+\include{index}
+```
+
+### Update Nomenclature, BibTeX Database and Indexes
+
+To update the BibTeX database and LaTeX document, a few commands need to be executed from the command line (i.e. Linux terminal window, DOS command window, Git Base, etc.) in the base repository directory:
+
+Update the __BibTeX__ database using the command:
+```
+$ BibTeX thesis
+```
+To make the changes effective the LaTeX document has to be rebuilt either using the command:
+```
+$ latex thesis
+```
+or the build command of the IDE used to create the LaTeX document.
+
+####Nomenclature
+
+The nomenclature LaTeX file is located here:
+
+```
++--- Nomenclature
+¦       nomenclature.tex
+```
+
+Styling of the nomenclature is based on a tutorial found on [TeX StackeEchange](http://tex.stackexchange.com/questions/112884/how-to-achieve-nomenclature-entries-like-symbol-description-dimension-and-uni) which allows to the nomenclature to be broken down into the following sections:
+
+__Dimensionless numbers__
+```latex
+\nomtypeG{\( \varepsilon_0 \)}{vacuum permittivity}{F/L}{\si{F.m^{-1}}}
+```
+
+__Greek symbols__
+```latex
+\nomtypeD{\( \mathcal A_r \)}{Archimedes number}{\(\displaystyle
+\frac{d^3g\rho_c\abs{\Delta\rho}}{\mu_c^2} = \sqrt{\frac{\mathcal
+E_0^3}{\mathcal M_0}} \)}
+```
+
+__Roman symbols__
+```latex
+\nomtypeR[abc]{\(a,b,c\)}{half axes of ellipsoid}{L}{\si{m}}
+\nomtypeR[C]{\(C\)}{dimensionless coefficient (e.g.\ for drag model)}{--}{1}
+\nomtypeR[CC]{\(\mathbf{C}\)}{another dimensionless coefficient}{--}{1}
+```
+
+The styling commands can be found in `Packages/mathphdthesis.sty` and the nomenclature itself is included as a file in `thesis.tex`:
+
+```latex
+% Include all the pieces of your thesis in here.
+\include{Frontbackmatter/prelude}
+\include{Frontbackmatter/newcom}
+\include{Nomenclature/nomenclature}
+\include{Chapters/chap1}
+\include{Chapters/chap2}
+\include{Chapters/chap3}
+\include{Chapters/chap4}
+\include{Appendices/app0}
+\include{Appendices/app1}
+\include{Appendices/app2}
+\include{Appendices/app3}
+\include{Appendices/app4}
+\include{biby}
+\include{index}
+```
+
+The inclusion of the chapter title in the table of contents (TOC) is handled using the starred version of `\chapter` as shown [here](http://tex.stackexchange.com/questions/22905/one-chapter-without-numeration). The code that has been included in the file `Nomenclature/nomenclature.tex` for this purpose is:
+
+```latex
+\chapter*{NOMENCLATURE}
+\addcontentsline{toc}{chapter}{NOMENCLATURE}
+\label{nomenclature}
+```
+
+####Basic steps to create an index for the document
+
+The following index configuration details have already been included in the presented template (see `Packages/mathphdthesis.sty`).
+
+Include the [makeidx package](http://www.tex.ac.uk/ctan/indexing/makeindex/doc/makeindex.pdf) using `\usepackage`. 
+
+```latex
+\usepackage{makeidx}
+```
+
+Put a `\makeindex` command in the document preamble.
+
+```latex
+\makeindex
+```
+
+Put a `\printindex` command where the index it to appear---usually at the end, before the \end{document} command.
+
+```latex
+\printindex
+```
+
+Steps that have to be taken by the user to create indexes are as follows:
+
+__Example index:__
+
+To create an index `Fourier Series` use the example shown in the text below:
+
+```latex
+To solve various problems in physics, it can be advantageous to express any arbitrary piecewise-smooth 
+function as a Fourier Series \index{Fourier Series} composed of multiples of sine and cosine functions.
+```
+
+But there are more options which are documented here:
+
+* [Wikibooks: LaTeX/Indexing](http://en.wikibooks.org/wiki/LaTeX/Indexing)
+* [Cambridge University Press: Indexing In LaTeX](https://authornet.cambridge.org/information/productionguide/stm/indexing_in_latex.asp)
+* [Tips on Indexing LATEX Documents](http://www.math.utah.edu/~beebe/talks/1998/idxtips.pdf)
+
+To create an index, the following commands have to be executed:
+
+1. Run LaTeX on your` .tex` file to generate a `.idx` file.
+```
+$ latex thesis
+```
+2. Run makeindex on `thesis.idx`.
+```
+$ makeindex thesis
+```
+3. Rerun LaTeX on your `.tex` file to create a document with an index.
+```
+$ latex thesis
+```
+
+### Required Software
+
+The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.
+
+* TeX: [MiKTeX](http://miktex.org/)
+* Editor: [TeXstudio](http://texstudio.sourceforge.net/)
+* BibTeX Database Manager: [JabRef](http://jabref.sourceforge.net/), [Zotero](http://www.zotero.org/) or [Mendeley](http://www.mendeley.com/)
+* Plotting: [GNUPlot](http://www.gnuplot.info/)
+* Graphics: [TikZ and PGF](http://www.texample.net/tikz/)
+
+Alternative LaTeX editors:
+
+* [Texmaker](http://www.xm1math.net/texmaker/)
+* [TeXnicCenter](http://www.texniccenter.org/)
+* [WinEdt](http://www.winedt.com/)
+* [Sublime Text](http://www.sublimetext.com/) with [LaTeX Plugin](https://github.com/SublimeText/LaTeXTools#readme)
+* [LyX](http://www.lyx.org/)
+ 
+As more extensive list of editors can be found in this post here [LaTeX Editors/IDEs (StackExchange)](http://tex.stackexchange.com/questions/339/latex-editors-ides).
+ 
+### Useful LaTeX Scripts
+
+* [latexdiff](http://www.ctan.org/pkg/latexdiff)
+* [biblatex](http://www.ctan.org/pkg/biblatex)
+* [koma-script](http://www.ctan.org/pkg/koma-script)
+
+### Useful Online Tools
+
+* [mathURL](http://mathurl.com/)
+* [Table Editor 1](http://truben.no/latex/table/)
+* [Table Editor 2](http://www.tablesgenerator.com/)
+* [BibTeX Editor](http://truben.no/latex//)
+* [latex-diff](http://3142.nl/latex-diff/)
+* [Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor)
+
+### Useful Links
+
+* [Using LATEX to Write a PhD Thesis](http://www.dickimaw-books.com/latex/thesis/thesis-report.pdf)
+* [TeX: Stackexchange](http://tex.stackexchange.com/)
+* [The not so Short Introduction to LaTeX](http://www.ctan.org/tex-archive/info/lshort/english/?action=/tex-archive/info/lshort/)
+* [howtoTeX](http://www.howtotex.com/)
+* [University of Cambridge: Text Processing using LaTeX](http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/)
+* [Short Math Guide for LATEX](ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf)
+* [The Comprehensive LATEX Symbol List](http://ctan.unsw.edu.au/info/symbols/comprehensive/symbols-letter.pdf)
+* [Strategies for including graphics in LATEX documents](http://www.tug.org/TUGboat/tb26-1/hoeppner.pdf)
+
+### Other LaTeX PhD Template Examples
+
+* [suchow / LaTeX-template-for-Harvard-dissertation](https://github.com/suchow/LaTeX-template-for-Harvard-dissertation)
+* [kks32 / phd-thesis-template](https://github.com/kks32/phd-thesis-template)
+
+License
+=======
+
+This software is free and is covered under the MIT License, given here:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

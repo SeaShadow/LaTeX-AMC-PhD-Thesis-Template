@@ -1,0 +1,40 @@
+\begin{thenomenclature} 
+
+ \nomgroup{D}
+
+  \item [{\( \mathcal A_r \)}]\begingroup \nomdescr {Archimedes number}\DefinitionCol {\(\displaystyle \frac {d^3g\rho _c\abs {\Delta \rho }}{\mu _c^2} = \sqrt {\frac {\mathcal E_0^3}{\mathcal M_0}} \)}\nomeqref {0}
+		\nompageref{vii}
+
+ \nomgroup{G}
+
+  \item [{\( \delta \)}]\begingroup \nomdescr {Boundary layer thickness}\DimensUnits {-}{m}\nomeqref {0}
+		\nompageref{vii}
+  \item [{\( \lambda \)}]\begingroup \nomdescr {Full scale to model scale ratio}\DimensUnits {$\frac {L_{s}}{L_{m}}$}{-}\nomeqref {0}
+		\nompageref{vii}
+  \item [{\( \mu \)}]\begingroup \nomdescr {Viscosity}\DimensUnits {$\frac {\mu }{\rho }$}{Kg/ms}\nomeqref {0}
+		\nompageref{vii}
+  \item [{\( \nu \)}]\begingroup \nomdescr {Kinematic viscosity}\DimensUnits {$\frac {\mu }{\rho }$}{m\textsuperscript {2}/s}\nomeqref {0}
+		\nompageref{vii}
+  \item [{\( \rho \)}]\begingroup \nomdescr {Mass density of fluid}\DimensUnits {-}{Kg/m\textsuperscript {3}}\nomeqref {0}
+		\nompageref{vii}
+
+ \nomgroup{R}
+
+  \item [{A\textsubscript {N}}]\begingroup \nomdescr {Nozzle discharge area}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}
+		\nompageref{vii}
+  \item [{A\textsubscript {S}}]\begingroup \nomdescr {Cross sectional area at station $s$}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}
+		\nompageref{vii}
+  \item [{B}]\begingroup \nomdescr {Moulded breadth}\DimensUnits {-}{m}\nomeqref {0}
+		\nompageref{vii}
+  \item [{B\textsubscript {hull, m}}]\begingroup \nomdescr {Beam of model hull}\DimensUnits {-}{m}\nomeqref {0}
+		\nompageref{vii}
+  \item [{L\textsubscript {OA}}]\begingroup \nomdescr {Length overall}\DimensUnits {-}{m}\nomeqref {0}
+		\nompageref{vii}
+  \item [{L\textsubscript {WL}}]\begingroup \nomdescr {Length waterline}\DimensUnits {-}{m}\nomeqref {0}
+		\nompageref{vii}
+  \item [{S\textsubscript {S}}]\begingroup \nomdescr {Wetted surface area}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}
+		\nompageref{vii}
+  \item [{T}]\begingroup \nomdescr {Draft}\DimensUnits {-}{$m$}\nomeqref {0}
+		\nompageref{vii}
+
+\end{thenomenclature}

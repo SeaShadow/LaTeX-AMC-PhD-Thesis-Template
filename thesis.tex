@@ -1,0 +1,152 @@
+%% -----------------------------------------------------------------
+%%  Original Template
+%% -----------------------------------------------------------------
+%%
+%%   Author:    Tim Callagha, University of Tasmania (UTas)
+%%   Email:     tgc@hilbert.maths.utas.edu.au
+%%   Copyright: 2003 Tim Callagha
+%% 
+%%   Style file to assist in generating a University of Tasmania PhD thesis
+%%   in Mathematics. Contains all the required formatting options and 
+%%   header/footer information that is set out in the Research Higher Degrees 
+%%   Resource Handbook (2003 version)
+%%
+%%   This file should be easily modifiable to comply with
+%%   minor formatting changes (such as the left margin width etc.)
+%% 
+%%   This style file is designed primarily for students of mathematics at UTas who
+%%   are undertaking a PhD. However, only very minor changes need to be made to the 
+%%   wording in a few places to use it as a template for an honours or Masters thesis 
+%%   as well. In fact, there is no particular reason why this could be not used for, 
+%%   say, an Arts thesis (Shock, Horror!) since it is mainly about the formatting and 
+%%   less about the content. However, the heading and chapter structure has been chosen
+%%   so as to be more in line with standard practice in the scientific streams. Again, 
+%%   if you know what you're doing then it's really not that difficult to modify the style 
+%%   file at the appropriate places. I have tried to comment it quite heavily so that 
+%%   interested persons can see how it does all its work and, hopefully, make changes 
+%%   that reflect personal tastes etc.
+%%
+%%   Source: http://staff.acecrc.org.au/~mdsumner/TCallaghan/
+%% 
+%%   This work consists of the files listed in the README file.
+%%
+%% -----------------------------------------------------------------
+%%  Modifications for Australian Maritime College (AMC) and
+%%	University of Tasmania (UTas) Department of Engineering 
+%% -----------------------------------------------------------------
+%%
+%%   Author:  Konrad Zürcher, Australian Maritime College (AMC)
+%%   Email:   Konrad.Zurcher@utas.edu.au
+%%   License: MIT License
+%%
+%%	 Modified version of the original template adjusted for styling
+%%   requirements of the University of Tasmania (UTas) Department of 
+%%   Engineering and the Australian Maritime College (AMC).
+%%
+%%   GitHub: https://github.com/SeaShadow/LaTeX-AMC-PhD-Template
+%% 
+%%   This work consists of the files listed in the README file.
+%%
+%% -----------------------------------------------------------------
+%%
+
+% thesis.tex (starting point of a UTas mathematics thesis)
+
+% Note that the following defaults are also contained in the 'report' class
+% (this is not exhaustive...see appropriate references for all options)
+% 'oneside' mode...overide with 'twoside' to force output for two-sided printing.
+% 'final' mode...overide with 'draft' to see linebreak malfunctioning.
+% For example, to use two-sided printing one would declare the 'documentclass'
+% as follows...
+% '\documentclass[11pt,a4paper,twoside]{report}'
+%
+% Specific Mathematical options are as follows
+% 'leqno' to force equation numbering on the left side of the page.
+% 'fleqn' to force formulas to flush left (centered is the default).
+% If 'fleqn' is specified then the left indent is controlled with '\mathindent'.
+% i.e. '\setlength{\mathindent}{2.5cm}'
+
+% Declare overall type of document (use 11pt report class on A4 paper).
+\documentclass[11pt,a4paper]{report}
+
+% If you want to generate an index you should include the following command
+% which puts a makeindex command in the preamble. Additionally, you need to un-comment
+% the file 'index' in the '\includeonly' command below and also include the 'index'
+% file in the main document.
+\makeindex
+\PassOptionsToPackage{nottoc}{tocbibind}
+
+% Include the style file which contains all the required formatting
+% information that is set out in the Research Higher Degrees Resource
+% Handbook (2003 version). NOTE: This file uses the following packages
+% 'graphicx' for graphics manipulation
+% 'fancyhdr' for nice headers and footers.
+% 'makeidx' for generating the index
+% 'tocbibind' for adding table of contents entries for bibliography, index etc.
+% 'sectsty' for generating stylised chapter and section headings.
+% 'lipsum' for generating dummy text.
+% 'natbib' and 'har2nat' for bib citations.
+% 'xcolor' color package.
+% 'epstopdf' EPS to PDF conversion.
+% You will need to make sure your LaTeX installation has these packages
+% installed...else it wont work :(
+\usepackage{Packages/mathphdthesis}
+
+% Here you would include any additional packages that you want to use.
+% You should make sure they don't clash with the above packages that
+% are in use in the style file.
+
+% Specify which pieces (other .tex files) you plan to include. You can comment
+% out files that you will include later or have already finished to speed
+% up TeX processing
+\includeonly{
+Frontbackmatter/prelude 	% Contains all the relevant candidate information (name, degrees, abstract etc)
+,Frontbackmatter/newcom 	% Place all you new commands in here
+,Nomenclature/nomenclature  % The nomenclature chapter
+,Chapters/Chapter1/chap1  	% The first chapter
+,Chapters/Chapter2/chap2  	% The second chapter
+,Chapters/Chapter3/chap3  	% The thrid chapter
+,Chapters/Chapter4/chap4  	% The fourth chapter
+,Chapters/Chapter5/chap5  	% The fifth chapter
+,Chapters/Chapter6/chap6  	% The sixtth chapter
+,Chapters/Chapter7/chap7  	% The seventh chapter
+,Appendices/app0   			% Needed to switch to appendix mode
+,Appendices/app1   			% Appendix A
+,Appendices/app2   			% Appendix B
+,Appendices/app3   			% Appendix C
+,Appendices/app4   			% Appendix D
+,Appendices/app5   			% Appendix E
+,Appendices/app6   			% Appendix F
+,Appendices/app7   			% Appendix G
+,index  					% Places the index in the thesis
+}
+
+% Begin the thesis
+\begin{document}
+
+% Include all the pieces of your thesis in here
+\include{Frontbackmatter/prelude}
+\include{Frontbackmatter/newcom}
+\include{Nomenclature/nomenclature}
+\include{Chapters/Chapter1/chap1}
+\include{Chapters/Chapter2/chap2}
+\include{Chapters/Chapter3/chap3}
+\include{Chapters/Chapter4/chap4}
+\include{Chapters/Chapter5/chap5}
+\include{Chapters/Chapter6/chap6}
+\include{Chapters/Chapter7/chap7}
+\include{Appendices/app0}
+\include{Appendices/app1}
+\include{Appendices/app2}
+\include{Appendices/app3}
+\include{Appendices/app4}
+\include{Appendices/app5}
+\include{Appendices/app6}
+\include{Appendices/app7}
+\include{index}
+
+% Bibliography
+\addcontentsline{toc}{chapter}{References/Bibliography}
+\printbibliography
+
+\end{document}

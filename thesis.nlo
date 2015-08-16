@@ -1,0 +1,14 @@
+\nomenclatureentry{G\( \lambda \)@[{\( \lambda \)}]\begingroup \nomdescr {Full scale to model scale ratio}\DimensUnits {$\frac {L_{s}}{L_{m}}$}{-}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{G\( \delta \)@[{\( \delta \)}]\begingroup \nomdescr {Boundary layer thickness}\DimensUnits {-}{m}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{G\( \rho \)@[{\( \rho \)}]\begingroup \nomdescr {Mass density of fluid}\DimensUnits {-}{Kg/m\textsuperscript {3}}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{G\( \nu \)@[{\( \nu \)}]\begingroup \nomdescr {Kinematic viscosity}\DimensUnits {$\frac {\mu }{\rho }$}{m\textsuperscript {2}/s}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{G\( \mu \)@[{\( \mu \)}]\begingroup \nomdescr {Viscosity}\DimensUnits {$\frac {\mu }{\rho }$}{Kg/ms}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{D\( \mathcal A_r \)@[{\( \mathcal A_r \)}]\begingroup \nomdescr {Archimedes number}\DefinitionCol {\(\displaystyle \frac {d^3g\rho _c\abs {\Delta \rho }}{\mu _c^2} = \sqrt {\frac {\mathcal E_0^3}{\mathcal M_0}} \)}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RANA\textsubscript {N}@[{A\textsubscript {N}}]\begingroup \nomdescr {Nozzle discharge area}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RASA\textsubscript {S}@[{A\textsubscript {S}}]\begingroup \nomdescr {Cross sectional area at station $s$}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RSSS\textsubscript {S}@[{S\textsubscript {S}}]\begingroup \nomdescr {Wetted surface area}\DimensUnits {-}{m\textsuperscript {2}}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RTT@[{T}]\begingroup \nomdescr {Draft}\DimensUnits {-}{$m$}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RLOAL\textsubscript {OA}@[{L\textsubscript {OA}}]\begingroup \nomdescr {Length overall}\DimensUnits {-}{m}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RLWLL\textsubscript {WL}@[{L\textsubscript {WL}}]\begingroup \nomdescr {Length waterline}\DimensUnits {-}{m}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RBB@[{B}]\begingroup \nomdescr {Moulded breadth}\DimensUnits {-}{m}\nomeqref {0}|nompageref}{vii}
+\nomenclatureentry{RBhullmB\textsubscript {hull, m}@[{B\textsubscript {hull, m}}]\begingroup \nomdescr {Beam of model hull}\DimensUnits {-}{m}\nomeqref {0}|nompageref}{vii}

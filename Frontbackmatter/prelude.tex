@@ -1,0 +1,69 @@
+% prelude.tex (specification of which features in `mathphdthesis.sty' you
+% are using, your personal information, and your title & abstract)
+
+% Specify features of `mathphdthesis.sty' you want to use:
+\titlepgtrue 												% Main title page (required)
+\signaturepagetrue 											% Page for declaration of originality (required)
+\copyrighttrue 												% Copyright page (required)
+\abswithesistrue 											% Abstract to be bound with thesis (optional)
+\acktrue 													% Acknowledgments page (optional)
+\tablecontentstrue 											% Table of contents page (required)
+\tablespagetrue 											% Table of contents page for tables (required only if you have tables)
+\figurespagetrue 											% Table of contents page for figures (required only if you have figures)
+
+% Title, author, supervisors, university, date of submission
+\title{Title of thesis\\goes here}							% Thesis title
+\author{$<$Candiate first name$>$ $<$Candiate surname$>$} 	% First name and surname of candidate (e.g. John Doe)
+\prevdegrees{$<$Previous degree$>$}              			% Specify your previous degrees (e.g. B.E. (Hons))
+\institute{$<$Department$>$}								% Institute of department (e.g. National Centre for Maritime Engineering and Hydrodynamics)
+\college{$<$Name of College$>$}								% Name of college (e.g. Australian Maritime College)
+\submittedfor{$<$Degree thesis is submitted for$>$}			% Degree thesis is submitted for (e.g. Submitted in fulfillment of the requirements for the Degree of Doctor of Philosophy)
+\advisor{$<$Title$>$ $<$First name$>$ $<$Surname$>$\\ $<$Title$>$ $<$First name$>$ $<$Surname$>$\\ $<$Title$>$ $<$First name$>$ $<$Surname$>$} % Supervisors: (e.g. Prof. Lawrence K. Forbes)
+\dept{$<$Name of University$>$}   					    	% Your academic department (e.g. University of Tasmania)
+\submitdate{$<$Month$>$, $<$Year$>$}						% Month & year of your thesis submission (e.g. January, 2016)
+
+% Abstract to be bound with thesis
+\newcommand{\abstextwithesis}
+{
+%Basic abstract goes here. Can use paragraphs and normal \LaTeX commands.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis augue eleifend, euismod nunc sed, mattis est. Quisque laoreet nibh ut ligula ullamcorper ornare quis non lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed quis nisi ac enim aliquet auctor vel eget nulla. In sollicitudin velit sed lorem semper, non iaculis diam ultricies. Sed viverra sagittis dui, eu congue ligula tempor in. Cras est neque, mollis sit amet accumsan a, gravida maximus libero. Aliquam mattis ante sem, at faucibus nisi malesuada ut.\\ \\
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vitae libero tristique, porttitor massa non, ultricies libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lectus lacus, semper ut tempor a, eleifend et mi. Duis et pulvinar diam. Integer tempor orci vel metus fermentum congue. Morbi luctus, massa eget elementum placerat, dui eros accumsan turpis, ut molestie magna tortor eget ipsum. Fusce molestie libero erat, sit amet ornare libero maximus nec. Nam lacinia ut sapien et pellentesque.\\ \\
+Vestibulum ultrices blandit ante, quis bibendum tellus tempor varius. In quis lectus odio. Nullam volutpat dignissim luctus. Etiam fermentum quam quam, a cursus ex dapibus in. Etiam sed odio diam. Integer faucibus, nunc ac bibendum eleifend, augue diam vehicula nibh, vel imperdiet justo nunc vitae velit. Ut nulla felis, facilisis nec efficitur sit amet, scelerisque vel metus. Suspendisse orci est, sagittis vel elementum sit amet, posuere at dui. Quisque porttitor maximus ligula, sit amet sollicitudin arcu vehicula eget. Pellentesque leo velit, rutrum et tincidunt eget, tincidunt non lorem. Donec mi lacus, gravida rutrum massa quis, aliquet tempor purus. Sed vel sodales leo. Sed mauris urna, ornare ac sollicitudin nec, egestas vitae est. Mauris euismod, sem ac vulputate malesuada, turpis leo ultrices velit, vitae iaculis sem nisl elementum mi.
+}
+
+% Acknowledgments page
+\newcommand{\acknowledgement}
+{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis augue eleifend, euismod nunc sed, mattis est. Quisque laoreet nibh ut ligula ullamcorper ornare quis non lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed quis nisi ac enim aliquet auctor vel eget nulla. In sollicitudin velit sed lorem semper, non iaculis diam ultricies. Sed viverra sagittis dui, eu congue ligula tempor in. Cras est neque, mollis sit amet accumsan a, gravida maximus libero. Aliquam mattis ante sem, at faucibus nisi malesuada ut.\\ \\
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus vitae libero tristique, porttitor massa non, ultricies libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lectus lacus, semper ut tempor a, eleifend et mi. Duis et pulvinar diam. Integer tempor orci vel metus fermentum congue. Morbi luctus, massa eget elementum placerat, dui eros accumsan turpis, ut molestie magna tortor eget ipsum. Fusce molestie libero erat, sit amet ornare libero maximus nec. Nam lacinia ut sapien et pellentesque.\\ \\
+Vestibulum ultrices blandit ante, quis bibendum tellus tempor varius. In quis lectus odio. Nullam volutpat dignissim luctus. Etiam fermentum quam quam, a cursus ex dapibus in. Etiam sed odio diam. Integer faucibus, nunc ac bibendum eleifend, augue diam vehicula nibh, vel imperdiet justo nunc vitae velit. Ut nulla felis, facilisis nec efficitur sit amet, scelerisque vel metus. Suspendisse orci est, sagittis vel elementum sit amet, posuere at dui. Quisque porttitor maximus ligula, sit amet sollicitudin arcu vehicula eget. Pellentesque leo velit, rutrum et tincidunt eget, tincidunt non lorem. Donec mi lacus, gravida rutrum massa quis, aliquet tempor purus. Sed vel sodales leo. Sed mauris urna, ornare ac sollicitudin nec, egestas vitae est. Mauris euismod, sem ac vulputate malesuada, turpis leo ultrices velit, vitae iaculis sem nisl elementum mi.
+}
+
+% Engineering guote page
+\newcommand{\engineeringquote}
+{
+\null\vskip1.8in
+\begin{quote}
+"Engineering is the art of modelling materials we do not wholly understand, into shapes we cannot precisely analyse so as to withstand forces we cannot properly assess, in such a way that the public has no reason to suspect the extent of our ignorance."\begin{flushright}- Dr. A. R. Dykes\\ British Institution of Structural Engineers, 1976\end{flushright}
+\end{quote}
+\null\vskip0.5in
+\begin{quote}
+"If you want to have a maximum effect on the design of a new engineering system, learn to draw. Engineers always wind up designing the vehicle to look like the initial artist's concept."\begin{flushright}- Georg von Tiesenhausen\\ Tiesenhausen's Law of Engineering Design\end{flushright}
+\end{quote}
+}
+
+% Bibliography Title
+\renewcommand{\bibname}{References/Bibliography}
+% Bibliography spacing
+\setlength\bibitemsep{1.5\itemsep}
+
+% Settings for array package
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Take care of things in `mathphdthesis.sty' behind the scenes.
+% Basically just does a check of all the fields that have been activated
+% above and fills out the appropriate pages and adds them to the thesis.
+\beforepreface
+\afterpreface
