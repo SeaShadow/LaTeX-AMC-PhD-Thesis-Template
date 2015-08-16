@@ -280,9 +280,16 @@ Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*
 \input{Chapters/Chapter1/sect14}
 ```
 
-The __CHAPTER INTRODUCTION__ contains the introduction text for the chapter, the inputs `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14` contain the content for sections __1.1__, __1.2__, __1.3__, and __1.4__.
+The __CHAPTER INTRODUCTION__ contains the introduction text for the chapter, the inputs (see below) contain the content for sections __1.1__, __1.2__, __1.3__, and __1.4__:
 
-Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14`, etc.) using the following code shown for example subsection __1.1.1__ which would be added to `Chapters/Chapter1/sect11`:
+```latex
+\input{Chapters/Chapter1/sect11}
+\input{Chapters/Chapter1/sect12}
+\input{Chapters/Chapter1/sect13}
+\input{Chapters/Chapter1/sect14}
+```
+
+Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, etc.) using the following code shown for example subsection __1.1.1__ which would be added to `Chapters/Chapter1/sect11`:
 
 ```latex
 %% SUBSECTION HEADER //////////////////////////////////////////////////////////////////////////////////
@@ -316,7 +323,7 @@ The nomenclature LaTeX file is located here:
 To rebuild the nomenclature after changes have been made use the following command using either a terminal or DOS command window:
 
 ```
-makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+$ makeindex thesis.nlo -s nomencl.ist -o thesis.nls
 ```
 
 After the nomenclature file was rebuilt using the above command, the thesis PDF file has to be rebuilt by either uisng the build command in a LaTeX editor or by using command line:
@@ -437,14 +444,19 @@ $ latex thesis
 
 The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.
 
-* TeX: [MiKTeX](http://miktex.org/)
+* MiKTeX (Windows): [MiKTeX](http://miktex.org/)
 * Editor: [TeXstudio](http://texstudio.sourceforge.net/)
 * BibTeX Database Manager: [JabRef](http://jabref.sourceforge.net/), [Zotero](http://www.zotero.org/) or [Mendeley](http://www.mendeley.com/)
 * Plotting: [GNUPlot](http://www.gnuplot.info/)
 * Graphics: [TikZ and PGF](http://www.texample.net/tikz/)
 
+Alternative TeX environments (for Mac OS X)
+
+* MacTeX (Mac OS X): [MacTeX](https://tug.org/mactex/)
+
 Alternative LaTeX editors:
 
+* [TeXstudio](http://www.texstudio.org/)
 * [Texmaker](http://www.xm1math.net/texmaker/)
 * [TeXnicCenter](http://www.texniccenter.org/)
 * [WinEdt](http://www.winedt.com/)
@@ -453,7 +465,7 @@ Alternative LaTeX editors:
  
 As more extensive list of editors can be found in this post here [LaTeX Editors/IDEs (StackExchange)](http://tex.stackexchange.com/questions/339/latex-editors-ides).
  
-### Useful LaTeX Scripts
+### Some Useful LaTeX Scripts
 
 * [latexdiff](http://www.ctan.org/pkg/latexdiff)
 * [biblatex](http://www.ctan.org/pkg/biblatex)
@@ -468,7 +480,7 @@ As more extensive list of editors can be found in this post here [LaTeX Editors/
 * [latex-diff](http://3142.nl/latex-diff/)
 * [Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor)
 
-### Useful Links
+### Other Useful Links
 
 * [Using LATEX to Write a PhD Thesis](http://www.dickimaw-books.com/latex/thesis/thesis-report.pdf)
 * [TeX: Stackexchange](http://tex.stackexchange.com/)
@@ -478,11 +490,6 @@ As more extensive list of editors can be found in this post here [LaTeX Editors/
 * [Short Math Guide for LATEX](ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf)
 * [The Comprehensive LATEX Symbol List](http://ctan.unsw.edu.au/info/symbols/comprehensive/symbols-letter.pdf)
 * [Strategies for including graphics in LATEX documents](http://www.tug.org/TUGboat/tb26-1/hoeppner.pdf)
-
-### Other LaTeX PhD Template Examples
-
-* [suchow / LaTeX-template-for-Harvard-dissertation](https://github.com/suchow/LaTeX-template-for-Harvard-dissertation)
-* [kks32 / phd-thesis-template](https://github.com/kks32/phd-thesis-template)
 
 License
 =======
