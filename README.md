@@ -295,7 +295,7 @@ Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, 
 \label{sec111}
 ```
 
-Examples for subsections can be found in:
+Examples for subsections are shown in:
 * `\Chapters\Chapter2\sect21.tex` showing subsections __2.1.1__, __2.1.2__, and __2.1.3__
 * `\Chapters\Chapter2\sect22.tex` showing subsections __2.2.1__, __2.2.2__, and __2.2.3__
 * `\Chapters\Chapter2\sect23.tex` showing subsections __2.3.1__, __2.3.2__, and __2.3.3__
