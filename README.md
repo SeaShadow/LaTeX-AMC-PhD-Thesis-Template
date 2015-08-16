@@ -1,8 +1,6 @@
 ## LaTeX-AMC-PhD-Thesis-Template
 
-LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. The thesis template is based on the [University of Tasmania Mathematics Style File and Thesis Template for LaTeX](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan.
-
-The original University of Tasmania Mathematics LaTeX template has been updated to adhere to the 2015 University of Tasmania (UTas) thesis guidelines.
+LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. The thesis template is based on the [University of Tasmania Mathematics Style File and Thesis Template for LaTeX](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan. The original University of Tasmania Mathematics LaTeX template has been updated to adhere to the 2015 University of Tasmania (UTas) thesis guidelines.
 
 ### Required packages
 
@@ -62,7 +60,7 @@ __>>__ Run LaTeX once more on thesis.tex:
 $ latex thesis
 ```
 
-For easier creation of the template use a LaTeX editor such as [Texmaker]{http://www.xm1math.net/texmaker/}, [TeXstudio]{http://www.texstudio.org/}, [TeXnicCenter]{http://www.texniccenter.org/} or [LyX]{http://www.lyx.org/} (see Required Software below).
+For easier creation of the template use a LaTeX editor such as [Texmaker](http://www.xm1math.net/texmaker/), [TeXstudio](http://www.texstudio.org/), [TeXnicCenter](http://www.texniccenter.org/) or [LyX](http://www.lyx.org/) (see Required Software below).
 
 ### LaTeX File Structure
 
@@ -180,9 +178,9 @@ To customise it for you personally, the file that you will need to edit is `prel
 \submitdate{<Month>, <Year>}						% Month & year of your thesis submission (e.g. January, 2016)
 ```
 
-To edit text change the content between the __{}__ braces. Now look at the very top of the file `prelude.tex`. 
+To edit text change the content between the __{}__ braces. 
 
-In the `prelude.tex` you'll see a lot of commands with `true` contained at the end of the command name. 
+To enable/disable certain parts of the template check the variables at the very top of the `prelude.tex` file. 
 
 ```latex
 \titlepgtrue	     % Main title page (required)
@@ -195,8 +193,7 @@ In the `prelude.tex` you'll see a lot of commands with `true` contained at the e
 \figurespagetrue 	 % Table of contents page for figures (required only if you have figures)
 ```
  
-These are flags that specify which elements of the preface 
-you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
+These are flags that specify which elements of the preface  you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
 the `true` to `false` at the end of the command name. 
 
 #### Adding new Chapters and Appendices
@@ -260,6 +257,37 @@ as well as in:
 \include{Appendices/app6}
 \include{Appendices/app7}
 \include{index}
+```
+
+### Subsections
+
+Subsections of chapters have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter `*.tex` files. The subsections (e.g. 1.1, 1.2, 1.3, etc.) are included in the main chapter `*.tex` files. This principle is shown for chapter 1 below:
+
+```latex
+%% CHAPTER HEADER /////////////////////////////////////////////////////////////////////////////////////
+\chapter[Figures, Equations, Tables, and Referencing]{Figures, Equations, Tables, and Referencing}
+\label{ch1}
+
+%% CHAPTER INTRODUCTION ///////////////////////////////////////////////////////////////////////////////
+
+\lipsum[1]
+
+%% INCLUDE SECTIONS ///////////////////////////////////////////////////////////////////////////////////
+
+\input{Chapters/Chapter1/sect11}
+\input{Chapters/Chapter1/sect12}
+\input{Chapters/Chapter1/sect13}
+\input{Chapters/Chapter1/sect14}
+```
+
+The __CHAPTER INTRODUCTION__ contains the introduction text for the chapter, the inputs `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14` contain the content for sections __1.1__, __1.2__, __1.3__, and __1.4__. This method is used for all the other chapters as well.
+
+Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14`, etc.) using the following code shown for example subsection __1.1.1__ which would be added to `Chapters/Chapter1/sect11`:
+
+```latex
+%% SUBSECTION HEADER //////////////////////////////////////////////////////////////////////////////////
+\subsection{Subsubsection}
+\label{sec111}
 ```
 
 ### Update Nomenclature, BibTeX Database and Indexes
