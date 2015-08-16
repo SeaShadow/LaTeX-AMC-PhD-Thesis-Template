@@ -203,9 +203,7 @@ To create new chapters and appendices:
 * __For a new Appendix:__ Create a new `appX.tex` file in __Appendices__ folder where __X__ stands for the appendix number (e.g. `app5.tex` or `app6.tex`).
 * __For a new Chapter:__ Create a new `chapX.tex` file in __Chapters__ folder where __X__ stands for the chapter number (e.g. `chap5.tex` or `chap6.tex`).
 
-For a basic section, subsection structure of the new chapter or appendix the example template files `chapter.tex` and `appendix.tex`, located in the __Templates__, can be used.
-
-Then open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
+For a basic section, subsection structure of the new chapter or appendix the example template files `chapter.tex` and `appendix.tex`, located in the __Templates__, can be used. Then open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
 
 ```latex
 % Specify which pieces (other .tex files) you plan to include. You can comment
@@ -261,7 +259,7 @@ as well as in:
 
 ### Sections and subsections
 
-Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter `*.tex` files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter `*.tex` files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
+Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
 
 ```latex
 %% CHAPTER HEADER /////////////////////////////////////////////////////////////////////////////////////
@@ -296,6 +294,11 @@ Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, 
 \subsection{Subsubsection}
 \label{sec111}
 ```
+
+Examples for subsections can be found in:
+* `\Chapters\Chapter2\sect21.tex`
+* `\Chapters\Chapter2\sect22.tex`
+* `\Chapters\Chapter2\sect23.tex`
 
 ### Update Nomenclature, BibTeX Database and Indexes
 
