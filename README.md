@@ -386,7 +386,7 @@ The inclusion of the chapter title in the table of contents (TOC) is handled usi
 \label{nomenclature}
 ```
 
-####Change Title of References/Bibliography
+####Change References/Bibliography Header Title
 
 The default header title used in the thesis template is __References/Bibliography__. This can be changed in `prelude.tex` by changing the title in the following code bit:
 
