@@ -34,7 +34,7 @@ The following LaTeX packages have to be installed for the thesis template to wor
 
 First steps:
 
-* Download and install [MiKTeX](http://miktex.org/)
+* Download and install [MiKTeX](http://miktex.org/) or other TeX framework (e.g. MacTeX, etc.)
 * Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository
 
 The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `\{path}\LaTeX-AMC-PhD-Thesis-Template`):
