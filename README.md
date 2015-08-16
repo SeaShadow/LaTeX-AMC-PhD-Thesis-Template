@@ -1,35 +1,45 @@
-## LaTeX-AMC-PhD-Thesis
+## LaTeX-AMC-PhD-Thesis-Template
 
-LaTeX document for University of Tasmania (UTas) PhD thesis which is based on the [LaTeX-AMC-PhD-Template](https://github.com/SeaShadow/LaTeX-AMC-PhD-Template).
+LaTeX document for University of Tasmania (UTas) PhD thesis which is based on based on [University of Tasmania Mathematics Style File and Thesis Template for LaTeX2e](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan.
 
-### Source template (Credit)
-
-The LaTeX template is based on [University of Tasmania Mathematics Style File and Thesis Template for LaTeX2e](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan.
-
-Template has been adjusted to fit the thesis guidelines of the Department of Engineering published by the University of Tasmania (UTas).
+Template has been updated to fit the current University of Tasmania (UTas) thesis guidelines.
 
 ### Required packages
 
-The following LaTeX packages have to be installed:
+The following LaTeX packages have to be installed for the thesis template to work:
 
-* `graphicx` for graphics manipulation
-* `makeidx` for generating the index
-* `fancyhdr` for nice headers and footers.
-* `tocbibind` for adding table of contents entries for bibliography, index etc.
-* `sectsty` for generating stylised chapter and section headings.
-* `lipsum` for generating dummy text.
-* `natbib` and `har2nat` for BibTeX citations.
-* `xcolor` color package.
-* `epstopdf` EPS to PDF conversion.
+* [array](https://www.ctan.org/pkg/array) for extending the array and tabular environments
+* [biblatex](https://www.ctan.org/pkg/biblatex) for bibliographies in LaTeX using BibTeX for sorting only
+* [booktabs](https://www.ctan.org/pkg/booktabs) for publication quality tables in LaTeX
+* [caption](https://www.ctan.org/pkg/caption) for customising captions in floating environments
+* [color](https://www.ctan.org/pkg/color) for colour control for LaTeX documents
+* [epstopdf](https://www.ctan.org/pkg/epstopdf) to convert EPS to encapsulated PDF using Ghostscript
+* [etoolbox](https://www.ctan.org/pkg/etoolbox) as eTeX toolbox for LaTeX
+* [fancyhdr](https://www.ctan.org/pkg/fancyhdr) for extensive control of page headers and footers in LaTeX
+* [filecontents](https://www.ctan.org/pkg/filecontents) for extended filecontents and filecontents* environments
+* [fixltx2e](https://www.ctan.org/pkg/booktabs) for LaTeX patches
+* [float](https://www.ctan.org/pkg/float) for improved interface for floating objects
+* [graphicx](https://www.ctan.org/pkg/graphicx) for graphics manipulation
+* [hyperref](https://www.ctan.org/pkg/hyperref) for extensive support for hypertext in LaTeX
+* [lipsum](https://www.ctan.org/pkg/lipsum) for easy access to the Lorem Ipsum dummy text
+* [makeidx](https://www.ctan.org/pkg/makeidx) as standard LaTeX package for creating indexes
+* [mathtools](https://www.ctan.org/pkg/mathtools) for mathematical tools to use with amsmath
+* [nomencl](https://www.ctan.org/pkg/nomencl) for lists of symbols
+* [ragged2e](https://www.ctan.org/pkg/ragged2e) for alternative versions of ragged-type comamands
+* [sectsty](https://www.ctan.org/pkg/sectsty) to control sectional headers
+* [showlabels](https://www.ctan.org/pkg/showlabels) to show label commands in the margin
+* [siunitx](https://www.ctan.org/pkg/siunitx) for a comprehensive (SI) units package
+* [tocbibind](https://www.ctan.org/pkg/tocbibind) to add bibliography/index/contents to Table of Contents (TOC)
+* [xcolor](https://www.ctan.org/pkg/xcolor) for driver-independent color extensions for LaTeX and pdfLaTeX
 
 ### Test BareBone Version of Template
 
 First steps:
 
 * Download and install [MiKTeX](http://miktex.org/)
-* Download/clone __LaTeX-AMC-PhD-Thesis__ repository
+* Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository
 
-The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `{path}\LaTeX-AMC-PhD-Thesis Repository`):
+The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `{path}\LaTeX-AMC-PhD-Thesis-Template Repository`):
 
 __>>__ Run LaTeX on thesis.tex:
 ```
@@ -52,28 +62,77 @@ __>>__ Run LaTeX once more on thesis.tex:
 $ latex thesis
 ```
 
-For easier creation of the template use a LaTeX editor such as Texmaker, TeXstudio, TeXnicCenter or LyX (see Required Software below).
+For easier creation of the template use a LaTeX editor such as [Texmaker]{http://www.xm1math.net/texmaker/}, [TeXstudio]{http://www.texstudio.org/}, [TeXnicCenter]{http://www.texniccenter.org/} or [LyX]{http://www.lyx.org/} (see Required Software below).
 
 ### LaTeX File Structure
 
 The breakdown of the LaTeX file structure is as follows:
 
 ```
-+--- Admin
 +--- Appendices
 ¦       app0.tex
 ¦       app1.tex
 ¦       app2.tex
 ¦       app3.tex
 ¦       app4.tex
-¦       ...
+¦       app5.tex
+¦       app6.tex
+¦       app7.tex
 +--- Chapters
-¦       chap1.tex
-¦       chap2.tex
-¦       chap3.tex
-¦       chap4.tex
-¦       ...
+¦       Chapter1
+¦          chap1.tex
+¦          sect11.tex
+¦          sect12.tex
+¦          sect13.tex
+¦          sect14.tex
+¦       Chapter2
+¦          chap2.tex
+¦          sect21.tex
+¦          sect22.tex
+¦          sect23.tex
+¦       Chapter3
+¦          chap3.tex
+¦          sect31.tex
+¦          sect32.tex
+¦          sect33.tex
+¦       Chapter4
+¦          chap4.tex
+¦          sect41.tex
+¦          sect42.tex
+¦          sect43.tex
+¦       Chapter5
+¦          chap5.tex
+¦          sect51.tex
+¦          sect52.tex
+¦          sect53.tex
+¦       Chapter6
+¦          chap6.tex
+¦          sect61.tex
+¦          sect62.tex
+¦          sect63.tex
+¦       Chapter7
+¦          chap7.tex
+¦          sect71.tex
+¦          sect72.tex
+¦          sect73.tex
 +--- Figures
+¦       Appendices
+¦          placeholder.jpg
+¦       Chapter_1
+¦          placeholder.jpg
+¦       Chapter_2
+¦          placeholder.jpg
+¦       Chapter_3
+¦          placeholder.jpg
+¦       Chapter_4
+¦          placeholder.jpg
+¦       Chapter_5
+¦          placeholder.jpg
+¦       Chapter_6
+¦          placeholder.jpg
+¦       Chapter_7
+¦          placeholder.jpg
+¦       University_of_Tasmania_AMC_Logo_RGB.jpg
 +--- Frontbackmatter
 ¦       index.tex
 ¦       newcom.tex
@@ -86,9 +145,6 @@ The breakdown of the LaTeX file structure is as follows:
 ¦       tocbibind.sty
 +--- References
 ¦       thesis.bib
-+--- Templates
-¦        appendix.tex
-¦        chapter.tex
 ¦   biby.tex
 ¦   index.tex
 ¦   LICENSE
@@ -101,26 +157,27 @@ Where content of folders are as follows:
 
 | Folder name         | Folder contents                                             |
 | ------------------- | ----------------------------------------------------------- |
-| __Admin__           | Thesis guideline documents, etc.                            |
 | __Appendices__      | Thesis appendices, each in its separate `appX.tex` file.    |
 | __Chapters__        | Thesis chapters, each in its separate `chapX.tex` file.     |
 | __Figures__         | Figures, plots, etc. as PDF or EPS files.                   |
 | __Frontbackmatter__ | Prelude, abstract, acknowledgements, etc.                   |
 | __Packages__        | Style (`*.sty`) files and custom LaTeX packages.            |
 | __References__      | BibTeX (`*.bib`) database file as referenced in `biby.tex`. |
-| __Templates__       | Example appendix and chapter LaTeX template.                |
 
 ### Customise the Template
 
 To customise it for you personally, the file that you will need to edit is `prelude.tex`. If you have a look in this file you will see the following lines:
 
 ```latex
-\title{PLACE THESIS TITLE HERE}     % Use all capital letters
-\author{Your Name} 				    % Use mixed upper & lower case
-\prevdegrees{B.A. B.Sc. Hons (Qld)} % Used to specify your previous degrees...use mixed upper & lower case
-\advisor{Dr John Doe}               % Advisers and supervisors
-\dept{Mathematics}                  % Your academic department
-\submitdate{August, 2004}           % Month & year of your thesis submission
+\title{Title of thesis\\goes here}					% Thesis title
+\author{<Candiate first name> <Candiate surname>} 	% First name and surname of candidate (e.g. John Doe)
+\prevdegrees{<Previous degree>}              		% Specify your previous degrees (e.g. B.E. (Hons))
+\institute{<Department>}							% Institute of department (e.g. National Centre for Maritime Engineering and Hydrodynamics)
+\college{<Name of College>}							% Name of college (e.g. Australian Maritime College)
+\submittedfor{<Degree thesis is submitted for>}		% Degree thesis is submitted for (e.g. Submitted in fulfillment of the requirements for the Degree of Doctor of Philosophy)
+\advisor{<Title> <First name> <Surname>\\ <Title> <First name> <Surname>\\ <Title> <First name> <Surname>} % Supervisors: (e.g. Prof. Lawrence K. Forbes)
+\dept{<Name of University>}   					    % Your academic department (e.g. University of Tasmania)
+\submitdate{<Month>, <Year>}						% Month & year of your thesis submission (e.g. January, 2016)
 ```
 
 To edit text change the content between the __{}__ braces. Now look at the very top of the file `prelude.tex`. 
@@ -154,20 +211,28 @@ For a basic section, subsection structure of the new chapter or appendix the exa
 Then open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
 
 ```latex
+% Specify which pieces (other .tex files) you plan to include. You can comment
+% out files that you will include later or have already finished to speed
+% up TeX processing
 \includeonly{
 Frontbackmatter/prelude 	% Contains all the relevant candidate information (name, degrees, abstract etc)
 ,Frontbackmatter/newcom 	% Place all you new commands in here
 ,Nomenclature/nomenclature  % The nomenclature chapter
-,Chapters/chap1  			% The first chapter
-,Chapters/chap2  			% The second chapter
-,Chapters/chap3  			% The third chapter
-,Chapters/chap4  			% The fourth chapter
+,Chapters/Chapter1/chap1  	% The first chapter
+,Chapters/Chapter2/chap2  	% The second chapter
+,Chapters/Chapter3/chap3  	% The thrid chapter
+,Chapters/Chapter4/chap4  	% The fourth chapter
+,Chapters/Chapter5/chap5  	% The fifth chapter
+,Chapters/Chapter6/chap6  	% The sixtth chapter
+,Chapters/Chapter7/chap7  	% The seventh chapter
 ,Appendices/app0   			% Needed to switch to appendix mode
-,Appendices/app1   			% The first appendix
-,Appendices/app2   			% The second appendix
-,Appendices/app3   			% The third appendix
-,Appendices/app4   			% The fourth appendix
-,biby  					 	% Makes the bibliography from the BibTeX database
+,Appendices/app1   			% Appendix A
+,Appendices/app2   			% Appendix B
+,Appendices/app3   			% Appendix C
+,Appendices/app4   			% Appendix D
+,Appendices/app5   			% Appendix E
+,Appendices/app6   			% Appendix F
+,Appendices/app7   			% Appendix G
 ,index  					% Places the index in the thesis
 }
 ```
@@ -175,20 +240,25 @@ Frontbackmatter/prelude 	% Contains all the relevant candidate information (name
 as well as in:
 
 ```latex
-% Include all the pieces of your thesis in here.
+% Include all the pieces of your thesis in here
 \include{Frontbackmatter/prelude}
 \include{Frontbackmatter/newcom}
 \include{Nomenclature/nomenclature}
-\include{Chapters/chap1}
-\include{Chapters/chap2}
-\include{Chapters/chap3}
-\include{Chapters/chap4}
+\include{Chapters/Chapter1/chap1}
+\include{Chapters/Chapter2/chap2}
+\include{Chapters/Chapter3/chap3}
+\include{Chapters/Chapter4/chap4}
+\include{Chapters/Chapter5/chap5}
+\include{Chapters/Chapter6/chap6}
+\include{Chapters/Chapter7/chap7}
 \include{Appendices/app0}
 \include{Appendices/app1}
 \include{Appendices/app2}
 \include{Appendices/app3}
 \include{Appendices/app4}
-\include{biby}
+\include{Appendices/app5}
+\include{Appendices/app6}
+\include{Appendices/app7}
 \include{index}
 ```
 
@@ -239,20 +309,25 @@ __Roman symbols__
 The styling commands can be found in `Packages/mathphdthesis.sty` and the nomenclature itself is included as a file in `thesis.tex`:
 
 ```latex
-% Include all the pieces of your thesis in here.
+% Include all the pieces of your thesis in here
 \include{Frontbackmatter/prelude}
 \include{Frontbackmatter/newcom}
-\include{Nomenclature/nomenclature}
-\include{Chapters/chap1}
-\include{Chapters/chap2}
-\include{Chapters/chap3}
-\include{Chapters/chap4}
+\include{Nomenclature/nomenclature} <<<=====
+\include{Chapters/Chapter1/chap1}
+\include{Chapters/Chapter2/chap2}
+\include{Chapters/Chapter3/chap3}
+\include{Chapters/Chapter4/chap4}
+\include{Chapters/Chapter5/chap5}
+\include{Chapters/Chapter6/chap6}
+\include{Chapters/Chapter7/chap7}
 \include{Appendices/app0}
 \include{Appendices/app1}
 \include{Appendices/app2}
 \include{Appendices/app3}
 \include{Appendices/app4}
-\include{biby}
+\include{Appendices/app5}
+\include{Appendices/app6}
+\include{Appendices/app7}
 \include{index}
 ```
 
@@ -373,6 +448,10 @@ License
 =======
 
 This software is free and is covered under the MIT License, given here:
+
+The MIT License (MIT)
+
+Copyright (c) 2015 Konny Zürcher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
