@@ -4,7 +4,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 This manual documents the installation, configuration and usage of the LaTeX template contained in the __LaTeX-AMC-PhD-Thesis-Template__ repository.
 
-### Required packages
+### Required LaTeX packages:
 
 The following LaTeX packages have to be installed for the thesis template to work:
 
@@ -31,6 +31,8 @@ The following LaTeX packages have to be installed for the thesis template to wor
 * [siunitx](https://www.ctan.org/pkg/siunitx) for a comprehensive (SI) units package
 * [tocbibind](https://www.ctan.org/pkg/tocbibind) to add bibliography/index/contents to Table of Contents (TOC)
 * [xcolor](https://www.ctan.org/pkg/xcolor) for driver-independent color extensions for LaTeX and pdfLaTeX
+
+The above mentioned packages are available for download on the Comprehensive TeX Archive Network (CTAN), but packages can also be installed using [package managers](http://docs.miktex.org/2.9/manual/pkgmgt.html) included in TeX environments such as __MikTeX__.
 
 ### Test BareBone Version of Template
 
