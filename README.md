@@ -456,14 +456,13 @@ Alternative TeX environments (for Mac OS X)
 
 Alternative LaTeX editors:
 
-* [TeXstudio](http://www.texstudio.org/)
 * [Texmaker](http://www.xm1math.net/texmaker/)
 * [TeXnicCenter](http://www.texniccenter.org/)
 * [WinEdt](http://www.winedt.com/)
 * [Sublime Text](http://www.sublimetext.com/) with [LaTeX Plugin](https://github.com/SublimeText/LaTeXTools#readme)
 * [LyX](http://www.lyx.org/)
  
-As more extensive list of editors can be found in this post here [LaTeX Editors/IDEs (StackExchange)](http://tex.stackexchange.com/questions/339/latex-editors-ides).
+As more extensive list of editors can be found in this post here [StackExchange Post: LaTeX Editors/IDEs](http://tex.stackexchange.com/questions/339/latex-editors-ides).
  
 ### Some Useful LaTeX Scripts
 
