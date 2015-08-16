@@ -37,7 +37,7 @@ First steps:
 * Download and install [MiKTeX](http://miktex.org/)
 * Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository
 
-The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `{path}\LaTeX-AMC-PhD-Thesis-Template Repository`):
+The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `\{path}\LaTeX-AMC-PhD-Thesis-Template`):
 
 __>>__ Run LaTeX on thesis.tex:
 ```
@@ -259,9 +259,9 @@ as well as in:
 \include{index}
 ```
 
-### Subsections
+### Sections and subsections
 
-Subsections of chapters have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter `*.tex` files. The subsections (e.g. 1.1, 1.2, 1.3, etc.) are included in the main chapter `*.tex` files. This principle is shown for chapter 1 below:
+Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter `*.tex` files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter `*.tex` files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
 
 ```latex
 %% CHAPTER HEADER /////////////////////////////////////////////////////////////////////////////////////
@@ -280,7 +280,7 @@ Subsections of chapters have been placed in their own `*.tex` file to allow easi
 \input{Chapters/Chapter1/sect14}
 ```
 
-The __CHAPTER INTRODUCTION__ contains the introduction text for the chapter, the inputs `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14` contain the content for sections __1.1__, __1.2__, __1.3__, and __1.4__. This method is used for all the other chapters as well.
+The __CHAPTER INTRODUCTION__ contains the introduction text for the chapter, the inputs `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14` contain the content for sections __1.1__, __1.2__, __1.3__, and __1.4__.
 
 Subsections can be added to the section files (i.e. `Chapters/Chapter1/sect11`, `Chapters/Chapter1/sect12`, `Chapters/Chapter1/sect13`, `Chapters/Chapter1/sect14`, etc.) using the following code shown for example subsection __1.1.1__ which would be added to `Chapters/Chapter1/sect11`:
 
@@ -311,6 +311,18 @@ The nomenclature LaTeX file is located here:
 ```
 +--- Nomenclature
 ¦       nomenclature.tex
+```
+
+To rebuild the nomenclature after changes have been made use the following command using either a terminal or DOS command window:
+
+```
+makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+```
+
+After the nomenclature file was rebuilt using the above command, the thesis PDF file has to be rebuilt by either uisng the build command in a LaTeX editor or by using command line:
+
+```
+$ latex thesis
 ```
 
 Styling of the nomenclature is based on a tutorial found on [TeX StackeEchange](http://tex.stackexchange.com/questions/112884/how-to-achieve-nomenclature-entries-like-symbol-description-dimension-and-uni) which allows to the nomenclature to be broken down into the following sections:
