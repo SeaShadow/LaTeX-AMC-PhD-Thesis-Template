@@ -2,7 +2,7 @@
 
 LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. The thesis template is based on the [University of Tasmania Mathematics Style File and Thesis Template for LaTeX](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan. The original University of Tasmania Mathematics LaTeX template has been updated to follow the 2015 University of Tasmania (UTas) thesis guidelines.
 
-The documentation below shows the installation, configuration and usage of the LaTeX thesis template.
+This manual documents the installation, configuration and usage of the LaTeX template contained in the __LaTeX-AMC-PhD-Thesis-Template__ repository.
 
 ### Required packages
 
