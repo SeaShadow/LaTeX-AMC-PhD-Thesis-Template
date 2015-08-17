@@ -36,12 +36,46 @@
 
 <p>LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. The thesis template is based on the <a href="http://staff.acecrc.org.au/%7Emdsumner/TCallaghan/">University of Tasmania Mathematics Style File and Thesis Template for LaTeX</a> by Tim Callaghan. The original University of Tasmania Mathematics LaTeX template has been updated to follow the 2015 University of Tasmania (UTas) thesis guidelines.</p>
 
-<p>This manual documents the installation, configuration and usage of the LaTeX template contained in the <strong>LaTeX-AMC-PhD-Thesis-Template</strong> repository.</p>
+<hr>
+
+<h3>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of Contents</h3>
+
+<ul>
+<li><a href="#1-title-page">1. Title Page</a></li>
+<li><a href="#2-required-latex-packages">2. Required LaTeX Packages</a></li>
+<li><a href="#3-test-barebone-version-of-template">3. Test BareBone Version of Template</a></li>
+<li><a href="#4-latex-file-structure">4. LaTeX File Structure</a></li>
+<li><a href="#5-customise-the-template">5. Customise the Template</a></li>
+<li><a href="#6-adding-new-chapters-and-appendices">6. Adding new Chapters and Appendices</a></li>
+<li><a href="#7-sections-and-subsections">7. Sections and Subsections</a></li>
+<li>
+<a href="#8-update-nomenclature-bibtex-database-and-indexes">8. Update Nomenclature, BibTeX Database and Indexes</a>
+
+<ul>
+<li><a href="#81-nomenclature">8.1 Nomenclature</a></li>
+<li><a href="#82-change-referencesbibliography-header-title">8.2 Change References/Bibliography Header Title</a></li>
+<li><a href="#83-basic-steps-to-create-an-index-for-the-document">8.3 Basic teps to create an index for the document</a></li>
+</ul>
+</li>
+<li><a href="#9-required-software">9. Required Software</a></li>
+<li><a href="#10-some-useful-latex-scripts">10. Some Useful LaTeX Scripts</a></li>
+<li><a href="#11-useful-online-tools">11. Useful Online Tools</a></li>
+<li><a href="#12-other-useful-links">12. Other Useful Links</a></li>
+<li><a href="#13-license">13. License</a></li>
+</ul>
 
 <hr>
 
 <h3>
-<a id="required-latex-packages" class="anchor" href="#required-latex-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required LaTeX packages:</h3>
+<a id="1-title-page" class="anchor" href="#1-title-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Title Page</h3>
+
+<p><img src="Figures/Thumbnails/title_page.png" alt="Template title page" width="450" height="640"></p>
+
+<hr>
+
+<h3>
+<a id="2-required-latex-packages" class="anchor" href="#2-required-latex-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Required LaTeX Packages</h3>
 
 <p>The following LaTeX packages have to be installed for the thesis template to work:</p>
 
@@ -99,7 +133,7 @@
 <hr>
 
 <h3>
-<a id="test-barebone-version-of-template" class="anchor" href="#test-barebone-version-of-template" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test BareBone Version of Template</h3>
+<a id="3-test-barebone-version-of-template" class="anchor" href="#3-test-barebone-version-of-template" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Test BareBone Version of Template</h3>
 
 <p>First steps:</p>
 
@@ -140,7 +174,7 @@
 <hr>
 
 <h3>
-<a id="latex-file-structure" class="anchor" href="#latex-file-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>LaTeX File Structure</h3>
+<a id="4-latex-file-structure" class="anchor" href="#4-latex-file-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. LaTeX File Structure</h3>
 
 <p>The breakdown of the LaTeX file structure is as follows:</p>
 
@@ -265,8 +299,10 @@
 </tbody>
 </table>
 
+<hr>
+
 <h3>
-<a id="customise-the-template" class="anchor" href="#customise-the-template" aria-hidden="true"><span class="octicon octicon-link"></span></a>Customise the Template</h3>
+<a id="5-customise-the-template" class="anchor" href="#5-customise-the-template" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Customise the Template</h3>
 
 <p>To customise it for you personally, the file that you will need to edit is <code>prelude.tex</code>. If you have a look in this file you will see the following lines:</p>
 
@@ -299,7 +335,7 @@ the <code>true</code> to <code>false</code> at the end of the command name. </p>
 <hr>
 
 <h3>
-<a id="adding-new-chapters-and-appendices" class="anchor" href="#adding-new-chapters-and-appendices" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding new Chapters and Appendices</h3>
+<a id="6-adding-new-chapters-and-appendices" class="anchor" href="#6-adding-new-chapters-and-appendices" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Adding new Chapters and Appendices</h3>
 
 <p>To create new chapters and appendices:</p>
 
@@ -363,7 +399,7 @@ Frontbackmatter/prelude     <span class="pl-c">% Contains all the relevant candi
 <hr>
 
 <h3>
-<a id="sections-and-subsections" class="anchor" href="#sections-and-subsections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sections and subsections</h3>
+<a id="7-sections-and-subsections" class="anchor" href="#7-sections-and-subsections" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. Sections and Subsections</h3>
 
 <p>Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own <code>*.tex</code> file to allow easier access to the content and shorten the individual chapter files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using <code>\input{section_file}</code> in the main chapter files (i.e. <code>chap1.tex</code>, <code>chap2.tex</code>, <code>chap3.tex</code>, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:</p>
 
@@ -412,7 +448,7 @@ Frontbackmatter/prelude     <span class="pl-c">% Contains all the relevant candi
 <hr>
 
 <h3>
-<a id="update-nomenclature-bibtex-database-and-indexes" class="anchor" href="#update-nomenclature-bibtex-database-and-indexes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update Nomenclature, BibTeX Database and Indexes</h3>
+<a id="8-update-nomenclature-bibtex-database-and-indexes" class="anchor" href="#8-update-nomenclature-bibtex-database-and-indexes" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Update Nomenclature, BibTeX Database and Indexes</h3>
 
 <p>To update the BibTeX database and LaTeX document, a few commands need to be executed from the command line (i.e. Linux terminal window, DOS command window, Git Base, etc.) in the base repository directory:</p>
 
@@ -429,7 +465,7 @@ Frontbackmatter/prelude     <span class="pl-c">% Contains all the relevant candi
 <p>or the build command of the IDE used to create the LaTeX document.</p>
 
 <h4>
-<a id="nomenclature" class="anchor" href="#nomenclature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nomenclature</h4>
+<a id="81-nomenclature" class="anchor" href="#81-nomenclature" aria-hidden="true"><span class="octicon octicon-link"></span></a>8.1 Nomenclature</h4>
 
 <p>The nomenclature LaTeX file is located here:</p>
 
@@ -495,7 +531,7 @@ E_0^3}{<span class="pl-c1">\mathcal</span> M_0}} <span class="pl-cce">\)</span>}
 <span class="pl-c1">\label</span>{nomenclature}</pre></div>
 
 <h4>
-<a id="change-referencesbibliography-header-title" class="anchor" href="#change-referencesbibliography-header-title" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change References/Bibliography Header Title</h4>
+<a id="82-change-referencesbibliography-header-title" class="anchor" href="#82-change-referencesbibliography-header-title" aria-hidden="true"><span class="octicon octicon-link"></span></a>8.2 Change References/Bibliography Header Title</h4>
 
 <p>The default header title used in the thesis template is <strong>References/Bibliography</strong>. This can be changed in <code>prelude.tex</code> by changing the title in the following code bit:</p>
 
@@ -503,7 +539,7 @@ E_0^3}{<span class="pl-c1">\mathcal</span> M_0}} <span class="pl-cce">\)</span>}
 <span class="pl-c1">\renewcommand</span>{<span class="pl-c1">\bibname</span>}{References/Bibliography}</pre></div>
 
 <h4>
-<a id="basic-steps-to-create-an-index-for-the-document" class="anchor" href="#basic-steps-to-create-an-index-for-the-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic steps to create an index for the document</h4>
+<a id="83-basic-steps-to-create-an-index-for-the-document" class="anchor" href="#83-basic-steps-to-create-an-index-for-the-document" aria-hidden="true"><span class="octicon octicon-link"></span></a>8.3 Basic steps to create an index for the document</h4>
 
 <p>The following index configuration details have already been included in the presented template (see <code>Packages/mathphdthesis.sty</code>).</p>
 
@@ -562,7 +598,7 @@ function as a Fourier Series <span class="pl-c1">\index</span>{Fourier Series} c
 <hr>
 
 <h3>
-<a id="required-software" class="anchor" href="#required-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>Required Software</h3>
+<a id="9-required-software" class="anchor" href="#9-required-software" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. Required Software</h3>
 
 <p>The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.</p>
 
@@ -603,7 +639,7 @@ function as a Fourier Series <span class="pl-c1">\index</span>{Fourier Series} c
 <hr>
 
 <h3>
-<a id="some-useful-latex-scripts" class="anchor" href="#some-useful-latex-scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some Useful LaTeX Scripts</h3>
+<a id="10-some-useful-latex-scripts" class="anchor" href="#10-some-useful-latex-scripts" aria-hidden="true"><span class="octicon octicon-link"></span></a>10. Some Useful LaTeX Scripts</h3>
 
 <ul>
 <li><a href="http://www.ctan.org/pkg/latexdiff">latexdiff</a></li>
@@ -614,7 +650,7 @@ function as a Fourier Series <span class="pl-c1">\index</span>{Fourier Series} c
 <hr>
 
 <h3>
-<a id="useful-online-tools" class="anchor" href="#useful-online-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Useful Online Tools</h3>
+<a id="11-useful-online-tools" class="anchor" href="#11-useful-online-tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>11. Useful Online Tools</h3>
 
 <ul>
 <li><a href="http://mathurl.com/">mathURL</a></li>
@@ -628,7 +664,7 @@ function as a Fourier Series <span class="pl-c1">\index</span>{Fourier Series} c
 <hr>
 
 <h3>
-<a id="other-useful-links" class="anchor" href="#other-useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other Useful Links</h3>
+<a id="12-other-useful-links" class="anchor" href="#12-other-useful-links" aria-hidden="true"><span class="octicon octicon-link"></span></a>12. Other Useful Links</h3>
 
 <ul>
 <li><a href="http://www.dickimaw-books.com/latex/thesis/thesis-report.pdf">Using LATEX to Write a PhD Thesis</a></li>
@@ -643,7 +679,7 @@ function as a Fourier Series <span class="pl-c1">\index</span>{Fourier Series} c
 <hr>
 
 <h3>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+<a id="13-license" class="anchor" href="#13-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>13. License</h3>
 
 <p>This software is free and is covered under the MIT License, given here:</p>
 
