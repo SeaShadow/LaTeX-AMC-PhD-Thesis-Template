@@ -8,20 +8,20 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 * [1. Title Page](#1-title-page)
 * [2. Required LaTeX Packages](#2-required-latex-packages)
-* [3. Test BareBone Version of Template]()
-* [4. LaTeX File Structure]()
-* [5. Customise the Template]()
-* [6. Adding new Chapters and Appendices]()
-* [7. Sections and subsections]()
-* [8. Update Nomenclature, BibTeX Database and Indexes]()
-  * [8.1 Nomenclature]()
-  * [8.2 Change References/Bibliography Header Title]()
-  * [8.3 Basic steps to create an index for the document]()
-* [9. Required Software]()
-* [10. Some Useful LaTeX Scripts]()
-* [11. Useful Online Tools]()
-* [12. Other Useful Links]()
-* [13. License]()
+* [3. Test BareBone Version of Template](#3-test-barebone-version-of-template)
+* [4. LaTeX File Structure](#4-latex-file-structure)
+* [5. Customise the Template](#5-customise-the-template)
+* [6. Adding new Chapters and Appendices](#6-adding-new-chapters-and-appendices)
+* [7. Sections and Subsections](#7-sections-and-subsections)
+* [8. Update Nomenclature, BibTeX Database and Indexes](#8-update-nomenclature-bibtex-database-and-indexes)
+  * [8.1 Nomenclature](#81-nomenclature)
+  * [8.2 Change References/Bibliography Header Title](#82-change-referencesbibliography-header-title)
+  * [8.3 Basic teps to create an index for the document](#83-basic-steps-to-create-an-index-for-the-document)
+* [9. Required Software](#9-required-software)
+* [10. Some Useful LaTeX Scripts](#10-some-useful-latex-scripts)
+* [11. Useful Online Tools](#11-useful-online-tools)
+* [12. Other Useful Links](#12-other-useful-links)
+* [13. License](#13-license)
 
 ---
 
@@ -298,7 +298,7 @@ as well as in:
 
 ---
 
-### 7. Sections and subsections
+### 7. Sections and Subsections
 
 Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
 
