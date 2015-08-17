@@ -4,13 +4,19 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 ---
 
-### Title Page
+### Table of Contents
+
+* [Title Page](#title-page)
+
+---
+
+### 1. Title Page
 
 <img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="450" height="640"/>
 
 ---
 
-### Required LaTeX packages:
+### 2. Required LaTeX packages:
 
 The following LaTeX packages have to be installed for the thesis template to work:
 
@@ -175,6 +181,8 @@ Where content of folders are as follows:
 | __Frontbackmatter__ | Prelude, abstract, acknowledgements, etc.                   |
 | __Packages__        | Style (`*.sty`) files and custom LaTeX packages.            |
 | __References__      | BibTeX (`*.bib`) database file as referenced in `biby.tex`. |
+
+---
 
 ### Customise the Template
 
