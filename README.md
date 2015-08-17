@@ -6,6 +6,12 @@ This manual documents the installation, configuration and usage of the LaTeX tem
 
 ---
 
+### Title Page
+
+<img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="400" height="569"/>
+
+---
+
 ### Required LaTeX packages:
 
 The following LaTeX packages have to be installed for the thesis template to work:
