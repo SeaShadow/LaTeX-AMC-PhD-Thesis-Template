@@ -29,7 +29,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 An example PDF of the LaTeX thesis template is availabe [here](https://github.com/SeaShadow/LaTeX-AMC-PhD-Thesis-Template/raw/master/thesis.pdf).
 
-<img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="450" height="640"/>
+<img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="450" height="640" border="1"/>
 
 ---
 
