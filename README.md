@@ -4,6 +4,8 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 This manual documents the installation, configuration and usage of the LaTeX template contained in the __LaTeX-AMC-PhD-Thesis-Template__ repository.
 
+---
+
 ### Required LaTeX packages:
 
 The following LaTeX packages have to be installed for the thesis template to work:
@@ -33,6 +35,8 @@ The following LaTeX packages have to be installed for the thesis template to wor
 * [xcolor](https://www.ctan.org/pkg/xcolor) for driver-independent color extensions for LaTeX and pdfLaTeX
 
 All above mentioned LaTeX packages are available for download on the Comprehensive TeX Archive Network (CTAN), but packages can also be installed by using package managers included in TeX environments such as the MikTeX [package manager](http://docs.miktex.org/2.9/manual/pkgmgt.html).
+
+---
 
 ### Test BareBone Version of Template
 
@@ -66,93 +70,95 @@ $ latex thesis
 
 For easier creation of the template use a LaTeX editor such as [Texmaker](http://www.xm1math.net/texmaker/), [TeXstudio](http://www.texstudio.org/), [TeXnicCenter](http://www.texniccenter.org/) or [LyX](http://www.lyx.org/) (see Required Software below).
 
+---
+
 ### LaTeX File Structure
 
 The breakdown of the LaTeX file structure is as follows:
 
 ```
 +--- Appendices
-¦       app0.tex
-¦       app1.tex
-¦       app2.tex
-¦       app3.tex
-¦       app4.tex
-¦       app5.tex
-¦       app6.tex
-¦       app7.tex
+Â¦       app0.tex
+Â¦       app1.tex
+Â¦       app2.tex
+Â¦       app3.tex
+Â¦       app4.tex
+Â¦       app5.tex
+Â¦       app6.tex
+Â¦       app7.tex
 +--- Chapters
-¦       Chapter1
-¦          chap1.tex
-¦          sect11.tex
-¦          sect12.tex
-¦          sect13.tex
-¦          sect14.tex
-¦       Chapter2
-¦          chap2.tex
-¦          sect21.tex
-¦          sect22.tex
-¦          sect23.tex
-¦       Chapter3
-¦          chap3.tex
-¦          sect31.tex
-¦          sect32.tex
-¦          sect33.tex
-¦       Chapter4
-¦          chap4.tex
-¦          sect41.tex
-¦          sect42.tex
-¦          sect43.tex
-¦       Chapter5
-¦          chap5.tex
-¦          sect51.tex
-¦          sect52.tex
-¦          sect53.tex
-¦       Chapter6
-¦          chap6.tex
-¦          sect61.tex
-¦          sect62.tex
-¦          sect63.tex
-¦       Chapter7
-¦          chap7.tex
-¦          sect71.tex
-¦          sect72.tex
-¦          sect73.tex
+Â¦       Chapter1
+Â¦          chap1.tex
+Â¦          sect11.tex
+Â¦          sect12.tex
+Â¦          sect13.tex
+Â¦          sect14.tex
+Â¦       Chapter2
+Â¦          chap2.tex
+Â¦          sect21.tex
+Â¦          sect22.tex
+Â¦          sect23.tex
+Â¦       Chapter3
+Â¦          chap3.tex
+Â¦          sect31.tex
+Â¦          sect32.tex
+Â¦          sect33.tex
+Â¦       Chapter4
+Â¦          chap4.tex
+Â¦          sect41.tex
+Â¦          sect42.tex
+Â¦          sect43.tex
+Â¦       Chapter5
+Â¦          chap5.tex
+Â¦          sect51.tex
+Â¦          sect52.tex
+Â¦          sect53.tex
+Â¦       Chapter6
+Â¦          chap6.tex
+Â¦          sect61.tex
+Â¦          sect62.tex
+Â¦          sect63.tex
+Â¦       Chapter7
+Â¦          chap7.tex
+Â¦          sect71.tex
+Â¦          sect72.tex
+Â¦          sect73.tex
 +--- Figures
-¦       Appendices
-¦          placeholder.jpg
-¦       Chapter_1
-¦          placeholder.jpg
-¦       Chapter_2
-¦          placeholder.jpg
-¦       Chapter_3
-¦          placeholder.jpg
-¦       Chapter_4
-¦          placeholder.jpg
-¦       Chapter_5
-¦          placeholder.jpg
-¦       Chapter_6
-¦          placeholder.jpg
-¦       Chapter_7
-¦          placeholder.jpg
-¦       University_of_Tasmania_AMC_Logo_RGB.jpg
+Â¦       Appendices
+Â¦          placeholder.jpg
+Â¦       Chapter_1
+Â¦          placeholder.jpg
+Â¦       Chapter_2
+Â¦          placeholder.jpg
+Â¦       Chapter_3
+Â¦          placeholder.jpg
+Â¦       Chapter_4
+Â¦          placeholder.jpg
+Â¦       Chapter_5
+Â¦          placeholder.jpg
+Â¦       Chapter_6
+Â¦          placeholder.jpg
+Â¦       Chapter_7
+Â¦          placeholder.jpg
+Â¦       University_of_Tasmania_AMC_Logo_RGB.jpg
 +--- Frontbackmatter
-¦       index.tex
-¦       newcom.tex
-¦       prelude.tex
+Â¦       index.tex
+Â¦       newcom.tex
+Â¦       prelude.tex
 +--- Nomenclature
-¦       nomenclature.tex
+Â¦       nomenclature.tex
 +--- Packages
-¦       mathphdthesis.sty
-¦       sectsty.sty
-¦       tocbibind.sty
+Â¦       mathphdthesis.sty
+Â¦       sectsty.sty
+Â¦       tocbibind.sty
 +--- References
-¦       thesis.bib
-¦   biby.tex
-¦   index.tex
-¦   LICENSE
-¦   README.md
-¦   thesis.pdf
-¦   thesis.tex 
+Â¦       thesis.bib
+Â¦   biby.tex
+Â¦   index.tex
+Â¦   LICENSE
+Â¦   README.md
+Â¦   thesis.pdf
+Â¦   thesis.tex 
 ```
 
 Where content of folders are as follows:
@@ -200,7 +206,9 @@ To enable/disable parts of the template (i.e. copyright page, list of tables, li
 These are flags that specify which elements of the preface  you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
 the `true` to `false` at the end of the command name. 
 
-#### Adding new Chapters and Appendices
+---
+
+### Adding new Chapters and Appendices
 
 To create new chapters and appendices:
 
@@ -261,6 +269,8 @@ as well as in:
 \include{index}
 ```
 
+---
+
 ### Sections and subsections
 
 Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
@@ -304,6 +314,8 @@ Examples for subsections are shown in:
 * `\Chapters\Chapter2\sect22.tex` showing subsections __2.2.1__, __2.2.2__, and __2.2.3__
 * `\Chapters\Chapter2\sect23.tex` showing subsections __2.3.1__, __2.3.2__, and __2.3.3__
 
+---
+
 ### Update Nomenclature, BibTeX Database and Indexes
 
 To update the BibTeX database and LaTeX document, a few commands need to be executed from the command line (i.e. Linux terminal window, DOS command window, Git Base, etc.) in the base repository directory:
@@ -324,7 +336,7 @@ The nomenclature LaTeX file is located here:
 
 ```
 +--- Nomenclature
-¦       nomenclature.tex
+Â¦       nomenclature.tex
 ```
 
 To rebuild the nomenclature after changes have been made use the following command using either a terminal or DOS command window:
@@ -456,6 +468,8 @@ $ makeindex thesis
 $ latex thesis
 ```
 
+---
+
 ### Required Software
 
 The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.
@@ -480,11 +494,15 @@ Alternative LaTeX editors:
  
 As more extensive list of editors can be found in this post here [StackExchange Post: LaTeX Editors/IDEs](http://tex.stackexchange.com/questions/339/latex-editors-ides).
  
+---
+
 ### Some Useful LaTeX Scripts
 
 * [latexdiff](http://www.ctan.org/pkg/latexdiff)
 * [biblatex](http://www.ctan.org/pkg/biblatex)
 * [koma-script](http://www.ctan.org/pkg/koma-script)
+
+---
 
 ### Useful Online Tools
 
@@ -495,6 +513,8 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [latex-diff](http://3142.nl/latex-diff/)
 * [Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor)
 
+---
+
 ### Other Useful Links
 
 * [Using LATEX to Write a PhD Thesis](http://www.dickimaw-books.com/latex/thesis/thesis-report.pdf)
@@ -502,18 +522,18 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [The not so Short Introduction to LaTeX](http://www.ctan.org/tex-archive/info/lshort/english/?action=/tex-archive/info/lshort/)
 * [howtoTeX](http://www.howtotex.com/)
 * [University of Cambridge: Text Processing using LaTeX](http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/)
-* [Short Math Guide for LATEX](ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf)
 * [The Comprehensive LATEX Symbol List](http://ctan.unsw.edu.au/info/symbols/comprehensive/symbols-letter.pdf)
 * [Strategies for including graphics in LATEX documents](http://www.tug.org/TUGboat/tb26-1/hoeppner.pdf)
 
-License
-=======
+---
+
+### License
 
 This software is free and is covered under the MIT License, given here:
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Konny Zürcher
+Copyright (c) 2015 Konny ZÃ¼rcher
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
