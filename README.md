@@ -6,7 +6,22 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 ### Table of Contents
 
-* [Title Page](#title-page)
+* [1. Title Page](#1-title-page)
+* [2. Required LaTeX Packages](#2-required-latex-packages)
+* [3. Test BareBone Version of Template]()
+* [4. LaTeX File Structure]()
+* [5. Customise the Template]()
+* [6. Adding new Chapters and Appendices]()
+* [7. Sections and subsections]()
+* [8. Update Nomenclature, BibTeX Database and Indexes]()
+  * [8.1 Nomenclature]()
+  * [8.2 Change References/Bibliography Header Title]()
+  * [8.3 Basic steps to create an index for the document]()
+* [9. Required Software]()
+* [10. Some Useful LaTeX Scripts]()
+* [11. Useful Online Tools]()
+* [12. Other Useful Links]()
+* [13. License]()
 
 ---
 
@@ -16,7 +31,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 ---
 
-### 2. Required LaTeX packages:
+### 2. Required LaTeX Packages
 
 The following LaTeX packages have to be installed for the thesis template to work:
 
@@ -48,7 +63,7 @@ All above mentioned LaTeX packages are available for download on the Comprehensi
 
 ---
 
-### Test BareBone Version of Template
+### 3. Test BareBone Version of Template
 
 First steps:
 
@@ -82,7 +97,7 @@ For easier creation of the template use a LaTeX editor such as [Texmaker](http:/
 
 ---
 
-### LaTeX File Structure
+### 4. LaTeX File Structure
 
 The breakdown of the LaTeX file structure is as follows:
 
@@ -184,7 +199,7 @@ Where content of folders are as follows:
 
 ---
 
-### Customise the Template
+### 5. Customise the Template
 
 To customise it for you personally, the file that you will need to edit is `prelude.tex`. If you have a look in this file you will see the following lines:
 
@@ -220,7 +235,7 @@ the `true` to `false` at the end of the command name.
 
 ---
 
-### Adding new Chapters and Appendices
+### 6. Adding new Chapters and Appendices
 
 To create new chapters and appendices:
 
@@ -283,7 +298,7 @@ as well as in:
 
 ---
 
-### Sections and subsections
+### 7. Sections and subsections
 
 Sections of chapters (i.e. 1.1, 1.2, 1.3, etc.) have been placed in their own `*.tex` file to allow easier access to the content and shorten the individual chapter files. The sections files (e.g. 1.1, 1.2, 1.3, etc.) are then included using `\input{section_file}` in the main chapter files (i.e. `chap1.tex`, `chap2.tex`, `chap3.tex`, etc.). This principle is shown for Chapter 1 below but this method applies to all the other chapters as well:
 
@@ -328,7 +343,7 @@ Examples for subsections are shown in:
 
 ---
 
-### Update Nomenclature, BibTeX Database and Indexes
+### 8. Update Nomenclature, BibTeX Database and Indexes
 
 To update the BibTeX database and LaTeX document, a few commands need to be executed from the command line (i.e. Linux terminal window, DOS command window, Git Base, etc.) in the base repository directory:
 
@@ -342,7 +357,7 @@ $ latex thesis
 ```
 or the build command of the IDE used to create the LaTeX document.
 
-####Nomenclature
+#### 8.1 Nomenclature
 
 The nomenclature LaTeX file is located here:
 
@@ -417,7 +432,7 @@ The inclusion of the chapter title in the table of contents (TOC) is handled usi
 \label{nomenclature}
 ```
 
-####Change References/Bibliography Header Title
+#### 8.2 Change References/Bibliography Header Title
 
 The default header title used in the thesis template is __References/Bibliography__. This can be changed in `prelude.tex` by changing the title in the following code bit:
 
@@ -426,7 +441,7 @@ The default header title used in the thesis template is __References/Bibliograph
 \renewcommand{\bibname}{References/Bibliography}
 ```
 
-####Basic steps to create an index for the document
+#### 8.3 Basic steps to create an index for the document
 
 The following index configuration details have already been included in the presented template (see `Packages/mathphdthesis.sty`).
 
@@ -482,7 +497,7 @@ $ latex thesis
 
 ---
 
-### Required Software
+### 9. Required Software
 
 The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.
 
@@ -508,7 +523,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
  
 ---
 
-### Some Useful LaTeX Scripts
+### 10. Some Useful LaTeX Scripts
 
 * [latexdiff](http://www.ctan.org/pkg/latexdiff)
 * [biblatex](http://www.ctan.org/pkg/biblatex)
@@ -516,7 +531,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 
 ---
 
-### Useful Online Tools
+### 11. Useful Online Tools
 
 * [mathURL](http://mathurl.com/)
 * [Table Editor 1](http://truben.no/latex/table/)
@@ -527,7 +542,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 
 ---
 
-### Other Useful Links
+### 12. Other Useful Links
 
 * [Using LATEX to Write a PhD Thesis](http://www.dickimaw-books.com/latex/thesis/thesis-report.pdf)
 * [TeX: Stackexchange](http://tex.stackexchange.com/)
@@ -539,7 +554,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 
 ---
 
-### License
+### 13. License
 
 This software is free and is covered under the MIT License, given here:
 
