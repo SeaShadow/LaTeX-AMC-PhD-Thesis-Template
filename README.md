@@ -29,6 +29,8 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 <img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="450" height="640"/>
 
+An example PDF of the LaTeX thesis template is availabe [here](thesis.pdf).
+
 ---
 
 ### 2. Required LaTeX Packages
