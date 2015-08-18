@@ -2,7 +2,7 @@
 
 LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. The thesis template is based on the [University of Tasmania Mathematics Style File and Thesis Template for LaTeX](http://staff.acecrc.org.au/~mdsumner/TCallaghan/) by Tim Callaghan. The original University of Tasmania Mathematics LaTeX template has been updated to follow the 2015 University of Tasmania (UTas) thesis guidelines.
 
----
+===
 
 ### Table of Contents
 
@@ -23,7 +23,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 * [12. Other Useful Links](#12-other-useful-links)
 * [13. License](#13-license)
 
----
+===
 
 ### 1. Title Page
 
@@ -31,7 +31,7 @@ An example PDF of the LaTeX thesis template is availabe [here](https://github.co
 
 <img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="550" height="783"/>
 
----
+===
 
 ### 2. Required LaTeX Packages
 
@@ -63,7 +63,7 @@ The following LaTeX packages have to be installed for the thesis template to wor
 
 All above mentioned LaTeX packages are available for download on the Comprehensive TeX Archive Network (CTAN), but packages can also be installed by using package managers included in TeX environments such as the MikTeX [package manager](http://docs.miktex.org/2.9/manual/pkgmgt.html).
 
----
+===
 
 ### 3. Test BareBone Version of Template
 
@@ -97,7 +97,7 @@ $ latex thesis
 
 For easier creation of the template use a LaTeX editor such as [Texmaker](http://www.xm1math.net/texmaker/), [TeXstudio](http://www.texstudio.org/), [TeXnicCenter](http://www.texniccenter.org/) or [LyX](http://www.lyx.org/) (see Required Software below).
 
----
+===
 
 ### 4. LaTeX File Structure
 
@@ -199,7 +199,7 @@ Where content of folders are as follows:
 | __Packages__        | Style (`*.sty`) files and custom LaTeX packages.            |
 | __References__      | BibTeX (`*.bib`) database file as referenced in `biby.tex`. |
 
----
+===
 
 ### 5. Customise the Template
 
@@ -235,7 +235,7 @@ To enable/disable parts of the template (i.e. copyright page, list of tables, li
 These are flags that specify which elements of the preface  you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
 the `true` to `false` at the end of the command name. 
 
----
+===
 
 ### 6. Adding new Chapters and Appendices
 
@@ -298,7 +298,7 @@ as well as in:
 \include{index}
 ```
 
----
+===
 
 ### 7. Sections and Subsections
 
@@ -343,7 +343,7 @@ Examples for subsections are shown in:
 * `\Chapters\Chapter2\sect22.tex` showing subsections __2.2.1__, __2.2.2__, and __2.2.3__
 * `\Chapters\Chapter2\sect23.tex` showing subsections __2.3.1__, __2.3.2__, and __2.3.3__
 
----
+===
 
 ### 8. Update Nomenclature, BibTeX Database and Indexes
 
@@ -497,7 +497,7 @@ $ makeindex thesis
 $ latex thesis
 ```
 
----
+===
 
 ### 9. Required Software
 
@@ -523,7 +523,7 @@ Alternative LaTeX editors:
  
 As more extensive list of editors can be found in this post here [StackExchange Post: LaTeX Editors/IDEs](http://tex.stackexchange.com/questions/339/latex-editors-ides).
  
----
+===
 
 ### 10. Some Useful LaTeX Scripts
 
@@ -531,7 +531,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [biblatex](http://www.ctan.org/pkg/biblatex)
 * [koma-script](http://www.ctan.org/pkg/koma-script)
 
----
+===
 
 ### 11. Useful Online Tools
 
@@ -542,7 +542,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [latex-diff](http://3142.nl/latex-diff/)
 * [Equation Editor](http://www.sciweavers.org/free-online-latex-equation-editor)
 
----
+===
 
 ### 12. Other Useful Links
 
@@ -554,7 +554,7 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [The Comprehensive LATEX Symbol List](http://ctan.unsw.edu.au/info/symbols/comprehensive/symbols-letter.pdf)
 * [Strategies for including graphics in LATEX documents](http://www.tug.org/TUGboat/tb26-1/hoeppner.pdf)
 
----
+===
 
 ### 13. License
 
