@@ -25,7 +25,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 
 An example PDF of the LaTeX thesis template is availabe [here](https://github.com/SeaShadow/LaTeX-AMC-PhD-Thesis-Template/raw/master/thesis.pdf).
 
-<img src="Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="550" height="783"/>
+<img src="https://raw.githubusercontent.com/SeaShadow/LaTeX-AMC-PhD-Thesis-Template/master/Figures/Thumbnails/title_page.png" alt="Template title page" class="inline" width="550" height="783"/>
 
 ### 2. Required LaTeX Packages
 
@@ -65,7 +65,7 @@ Download and install [MiKTeX](http://miktex.org/) or other TeX framework (e.g. M
 
 The following command has to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `\{path}`):
 
-Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository using the following command:
+Download/clone `LaTeX-AMC-PhD-Thesis-Template` repository using the following command:
 
 ```latex
 $ git clone https://github.com/SeaShadow/LaTeX-AMC-PhD-Thesis-Template.git
