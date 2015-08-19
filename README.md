@@ -8,7 +8,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 * [2. Required LaTeX Packages](#2-required-latex-packages)
 * [3. Test BareBone Version of Template](#3-test-barebone-version-of-template)
 * [4. LaTeX File Structure](#4-latex-file-structure)
-* [5. Customise the Template](#5-customise-the-template)
+* [5. Customise the Template](#5-custommise-title-page-and-enabledisable-parts-of-the-template)
 * [6. Adding new Chapters and Appendices](#6-adding-new-chapters-and-appendices)
 * [7. Sections and Subsections](#7-sections-and-subsections)
 * [8. Update Nomenclature, BibTeX Database and Indexes](#8-update-nomenclature-bibtex-database-and-indexes)
@@ -61,33 +61,39 @@ All above mentioned LaTeX packages are available for download on the Comprehensi
 
 First steps:
 
-* Download and install [MiKTeX](http://miktex.org/) or other TeX framework (e.g. MacTeX, etc.)
-* Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository
+Download and install [MiKTeX](http://miktex.org/) or other TeX framework (e.g. MacTeX, etc.)
 
-The following commands have to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `\{path}\LaTeX-AMC-PhD-Thesis-Template`):
+The following command has to be executed in a terminal (e.g. Linux command terminal, Git Bash, DOS prompt, etc.) in the GitHub project directory (i.e. `\{path}`):
 
-__>>__ Run LaTeX on thesis.tex:
+Download/clone __LaTeX-AMC-PhD-Thesis-Template__ repository using the following command:
+
+```latex
+$ git clone https://github.com/SeaShadow/LaTeX-AMC-PhD-Thesis-Template.git
+$ cd LaTeX-AMC-PhD-Thesis-Template
 ```
-$ latex thesis.tex
+
+Run LaTeX on thesis.tex:
 ```
-__>>__ Run BibTeX on thesis.tex:
+$ latex thesis
+```
+Run BibTeX on thesis.tex:
 ```
 $ bibtex thesis
 ```
-__>>__ Run MakeIndex on thesis.idx (note the different file extension):
+Run MakeIndex on thesis.idx (note the different file extension):
 ```
 $ makeindex thesis
 ```
-__>>__ Run LaTeX again on thesis.tex:
+Run LaTeX again on thesis.tex:
 ```
 $ latex thesis
 ```
-__>>__ Run LaTeX once more on thesis.tex:
+Run LaTeX once more on thesis.tex:
 ```
 $ latex thesis
 ```
 
-For easier creation of the template use a LaTeX editor such as [Texmaker](http://www.xm1math.net/texmaker/), [TeXstudio](http://www.texstudio.org/), [TeXnicCenter](http://www.texniccenter.org/) or [LyX](http://www.lyx.org/) (see Required Software below).
+For easier creation of the template use a LaTeX editor such as [Texmaker](http://www.xm1math.net/texmaker/), [TeXstudio](http://www.texstudio.org/), [TeXnicCenter](http://www.texniccenter.org/) or [LyX](http://www.lyx.org/) (see [9. Required Software](#9-required-software)).
 
 ### 4. LaTeX File Structure
 
@@ -95,87 +101,87 @@ The breakdown of the LaTeX file structure is as follows:
 
 ```
 +--- Appendices
-¦       app0.tex
-¦       app1.tex
-¦       app2.tex
-¦       app3.tex
-¦       app4.tex
-¦       app5.tex
-¦       app6.tex
-¦       app7.tex
+¦        app0.tex
+¦        app1.tex
+¦        app2.tex
+¦        app3.tex
+¦        app4.tex
+¦        app5.tex
+¦        app6.tex
+¦        app7.tex
 +--- Chapters
-¦       Chapter1
-¦          chap1.tex
-¦          sect11.tex
-¦          sect12.tex
-¦          sect13.tex
-¦          sect14.tex
-¦       Chapter2
-¦          chap2.tex
-¦          sect21.tex
-¦          sect22.tex
-¦          sect23.tex
-¦       Chapter3
-¦          chap3.tex
-¦          sect31.tex
-¦          sect32.tex
-¦          sect33.tex
-¦       Chapter4
-¦          chap4.tex
-¦          sect41.tex
-¦          sect42.tex
-¦          sect43.tex
-¦       Chapter5
-¦          chap5.tex
-¦          sect51.tex
-¦          sect52.tex
-¦          sect53.tex
-¦       Chapter6
-¦          chap6.tex
-¦          sect61.tex
-¦          sect62.tex
-¦          sect63.tex
-¦       Chapter7
-¦          chap7.tex
-¦          sect71.tex
-¦          sect72.tex
-¦          sect73.tex
+¦    ¦__ Chapter1
+¦    ¦     chap1.tex
+¦    ¦     sect11.tex
+¦    ¦     sect12.tex
+¦    ¦     sect13.tex
+¦    ¦     sect14.tex
+¦    ¦__ Chapter2
+¦    ¦     chap2.tex
+¦    ¦     sect21.tex
+¦    ¦     sect22.tex
+¦    ¦     sect23.tex
+¦    ¦__ Chapter3
+¦    ¦     chap3.tex
+¦    ¦     sect31.tex
+¦    ¦     sect32.tex
+¦    ¦     sect33.tex
+¦    ¦__ Chapter4
+¦    ¦     chap4.tex
+¦    ¦     sect41.tex
+¦    ¦     sect42.tex
+¦    ¦     sect43.tex
+¦    ¦__ Chapter5
+¦    ¦     chap5.tex
+¦    ¦     sect51.tex
+¦    ¦     sect52.tex
+¦    ¦     sect53.tex
+¦    ¦__ Chapter6
+¦    ¦     chap6.tex
+¦    ¦     sect61.tex
+¦    ¦     sect62.tex
+¦    ¦     sect63.tex
+¦    ¦__ Chapter7
+¦    ¦     chap7.tex
+¦    ¦     sect71.tex
+¦    ¦     sect72.tex
+¦    ¦     sect73.tex
 +--- Figures
-¦       Appendices
-¦          placeholder.jpg
-¦       Chapter_1
-¦          placeholder.jpg
-¦       Chapter_2
-¦          placeholder.jpg
-¦       Chapter_3
-¦          placeholder.jpg
-¦       Chapter_4
-¦          placeholder.jpg
-¦       Chapter_5
-¦          placeholder.jpg
-¦       Chapter_6
-¦          placeholder.jpg
-¦       Chapter_7
-¦          placeholder.jpg
-¦       University_of_Tasmania_AMC_Logo_RGB.jpg
+¦    ¦__ Appendices
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_1
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_2
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_3
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_4
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_5
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_6
+¦    ¦     placeholder.jpg
+¦    ¦__ Chapter_7
+¦    ¦     placeholder.jpg
+¦    ¦   University_of_Tasmania_AMC_Logo_RGB.jpg
 +--- Frontbackmatter
-¦       index.tex
-¦       newcom.tex
-¦       prelude.tex
+¦    ¦   index.tex
+¦    ¦   newcom.tex
+¦    ¦   prelude.tex
 +--- Nomenclature
-¦       nomenclature.tex
+¦    ¦   nomenclature.tex
 +--- Packages
-¦       mathphdthesis.sty
-¦       sectsty.sty
-¦       tocbibind.sty
+¦    ¦   mathphdthesis.sty
+¦    ¦   sectsty.sty
+¦    ¦   tocbibind.sty
 +--- References
-¦       thesis.bib
-¦   biby.tex
-¦   index.tex
-¦   LICENSE
-¦   README.md
-¦   thesis.pdf
-¦   thesis.tex 
+¦    ¦   thesis.bib
+¦    biby.tex
+¦    index.tex
+¦    LICENSE
+¦    README.md
+¦    thesis.pdf
+¦    thesis.tex 
 ```
 
 Where content of folders are as follows:
@@ -191,7 +197,7 @@ Where content of folders are as follows:
 
 ### 5. Custommise Title Page and Enable/Disable Parts of the Template
 
-To customise it for you personally, the file that you will need to edit is `prelude.tex`. If you have a look in this file you will see the following lines:
+To customise it for you personally, the file that needs to adjusted is `Frontbackmatter/prelude.tex`. To adjust the title page, just change the text the content between the __{}__ brackets and rebuild the LaTeX PDF file:
 
 ```latex
 \title{Title of thesis\\goes here}					% Thesis title
@@ -205,32 +211,32 @@ To customise it for you personally, the file that you will need to edit is `prel
 \submitdate{<Month>, <Year>}						% Month & year of your thesis submission (e.g. January, 2016)
 ```
 
-To edit text change the content between the __{}__ braces. 
-
-To enable/disable parts of the template (i.e. copyright page, list of tables, list of figures, etc.) use the variables stated at the very top of the `prelude.tex` file. 
+To enable/disable parts of the template (i.e. copyright page, list of tables, list of figures, etc.) use the variables stated at the very top of the `Frontbackmatter/prelude.tex` file. 
 
 ```latex
-\titlepgtrue	     % Main title page (required)
-\signaturepagetrue   % Page for declaration of originality (required)
-\copyrighttrue 		 % Copyright page (required)
-\abswithesistrue 	 % Abstract to be bound with thesis (optional)
-\acktrue 			 % Acknowledgements page (optional)
-\tablecontentstrue 	 % Table of contents page (required)
-\tablespagetrue 	 % Table of contents page for tables (required only if you have tables)
-\figurespagetrue 	 % Table of contents page for figures (required only if you have figures)
+% Specify features of `mathphdthesis.sty' to be used:
+\titlepgtrue 		% Main title page (required)
+\signaturepagetrue 	% Page for declaration of originality (required)
+\copyrighttrue 		% Copyright page (required)
+\abswithesistrue 	% Abstract to be bound with thesis (optional)
+\acktrue 			% Acknowledgments page (optional)
+\tablecontentstrue 	% Table of contents page (required)
+\tablespagetrue 	% Table of contents page for tables (required only if you have tables)
+\figurespagetrue 	% Table of contents page for figures (required only if you have figures)
 ```
  
-These are flags that specify which elements of the preface  you want to generate. By default all the commands are set to `true`, which means it will include everything but if you don't want to include something you can change 
-the `true` to `false` at the end of the command name. 
+These are flags that specify which elements of the preface are generated. By default all the commands are set to `true`, which means it will include everything. If parts are to be disabled just can change the `true` to `false` at the end of the command name. 
 
 ### 6. Adding new Chapters and Appendices
 
 To create new chapters and appendices:
 
-* __For a new Appendix:__ Create a new `appX.tex` file in __Appendices__ folder where __X__ stands for the appendix number (e.g. `app5.tex` or `app6.tex`).
-* __For a new Chapter:__ Create a new `chapX.tex` file in __Chapters__ folder where __X__ stands for the chapter number (e.g. `chap5.tex` or `chap6.tex`).
+* __For a new Appendix:__ 
+  * Create a new `appX.tex` file in `Appendices` folder where __X__ stands for the appendix number (e.g. `app5.tex` or `app6.tex`).
+* __For a new Chapter:__ 
+  * Create a new `chapX.tex` file in `Chapters` folder where __X__ stands for the chapter number (e.g. `chap5.tex` or `chap6.tex`).
 
-For a basic section, subsection structure of the new chapter or appendix the example template files `chapter.tex` and `appendix.tex`, located in the __Templates__, can be used. Then open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
+Open file `thesis.tex` and add a new reference to the new chapter or appendix file in the LaTeX code at the end of the file:
 
 ```latex
 % Specify which pieces (other .tex files) you plan to include. You can comment
@@ -466,7 +472,7 @@ But there are more options which are documented here:
 
 To create an index, the following commands have to be executed:
 
-1. Run LaTeX on your` .tex` file to generate a `.idx` file.
+1. Run LaTeX on the `thesis.tex` file to generate a `.idx` file.
 ```
 $ latex thesis
 ```
@@ -474,14 +480,14 @@ $ latex thesis
 ```
 $ makeindex thesis
 ```
-3. Rerun LaTeX on your `.tex` file to create a document with an index.
+3. Rerun LaTeX on the `thesis.tex` file to create a document with an index.
 ```
 $ latex thesis
 ```
 
 ### 9. Required Software
 
-The template has been created using Windows based tools and TeX installs but there are many tools available for Mac OS, Linux, etc. but they will not be mentioned here.
+The template has been created using Windows based tools and TeX installs but there are many available tools for Mac OS, Linux as well.
 
 * MiKTeX (Windows): [MiKTeX](http://miktex.org/)
 * Editor: [TeXstudio](http://texstudio.sourceforge.net/)
