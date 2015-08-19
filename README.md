@@ -8,7 +8,7 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 * [2. Required LaTeX Packages](#2-required-latex-packages)
 * [3. Test BareBone Version of Template](#3-test-barebone-version-of-template)
 * [4. LaTeX File Structure](#4-latex-file-structure)
-* [5. Customise the Template](#5-custommise-title-page-and-enabledisable-parts-of-the-template)
+* [5. Custommise Title Page and Enable/Disable Parts of the Template](#5-custommise-title-page-and-enabledisable-parts-of-the-template)
 * [6. Adding new Chapters and Appendices](#6-adding-new-chapters-and-appendices)
 * [7. Sections and Subsections](#7-sections-and-subsections)
 * [8. Update Nomenclature, BibTeX Database and Indexes](#8-update-nomenclature-bibtex-database-and-indexes)
@@ -197,7 +197,7 @@ Where content of folders are as follows:
 
 ### 5. Custommise Title Page and Enable/Disable Parts of the Template
 
-To customise it for you personally, the file that needs to adjusted is `Frontbackmatter/prelude.tex`. To adjust the title page, just change the text the content between the __{}__ brackets and rebuild the LaTeX PDF file:
+To customise it for you personally, the file that needs to adjusted is `Frontbackmatter/prelude.tex`. To adjust the title page, just change the text the content between the `{ ... }` brackets and rebuild the LaTeX PDF file:
 
 ```latex
 \title{Title of thesis\\goes here}					% Thesis title
@@ -211,7 +211,7 @@ To customise it for you personally, the file that needs to adjusted is `Frontbac
 \submitdate{<Month>, <Year>}						% Month & year of your thesis submission (e.g. January, 2016)
 ```
 
-To enable/disable parts of the template (i.e. copyright page, list of tables, list of figures, etc.) use the variables stated at the very top of the `Frontbackmatter/prelude.tex` file. 
+To enable/disable parts of the template (i.e. copyright page, table of contents, list of tables, list of figures, acknowledgments ) use the variables stated at the very top of the `Frontbackmatter/prelude.tex` file. 
 
 ```latex
 % Specify features of `mathphdthesis.sty' to be used:
@@ -424,7 +424,7 @@ The inclusion of the chapter title in the table of contents (TOC) is handled usi
 
 #### 8.2 Change References/Bibliography Header Title
 
-The default header title used in the thesis template is __References/Bibliography__. This can be changed in `prelude.tex` by changing the title in the following code bit:
+The default header title used in the thesis template is `References/Bibliography`. This can be changed in `prelude.tex` by changing the title in the following code bit:
 
 ```latex
 % Bibliography Title
