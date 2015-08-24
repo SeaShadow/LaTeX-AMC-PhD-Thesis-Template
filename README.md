@@ -563,7 +563,7 @@ where
 * `outfile.pdf` is the new, compressed file
 * `infile.pdf` is the original file
 
-Ghostscript resamples to a given dots per inch (DPI) based on `dPDFSETTINGS`:
+This command will compress `infile.pdf` to `outfile.pdf`, compressing using the `/prepress` preset. You can specify several different presets for `dPDFSETTINGS`, which affects the given dots per inch (DPI) to which the images are resampled:
 
 | Preset         | Dots per inch (DPI)      |
 | -------------- | ------------------------ |
@@ -573,13 +573,42 @@ Ghostscript resamples to a given dots per inch (DPI) based on `dPDFSETTINGS`:
 | `/screen`      | 72 dpi                   |
 | `/default`     | Default dpi setting)     |
 
-| 1 | 2 | 3 | 4 | 5 |
-|---|---|---|---|---|
-| a | b | c | d | e |
-| f | g | h | i | j |
-| k | l | m | n | 0 |
-
 More details about this PDF compression method can be found [here](http://tex.stackexchange.com/questions/73444/can-pdflatex-or-any-tex-package-automatically-rescale-included-images-which-ha), [here (part 1)](http://www.peteryu.ca/tutorials/publishing/pdf_manipulation_tips), and [here (part 2)](http://www.peteryu.ca/tutorials/publishing/pdf_manipulation_tips2).
+
+If lossless compression instead of lossy compression is required, there are some options which can be considered which are:
+
+For colour images:
+
+```latex
+-dAutoFilterColorImages=false
+-dColorImageFilter=/FlateEncode
+```
+
+For grayscale images:
+
+```latex
+-dAutoFilterGrayImages=false
+-dGrayImageFilter=/FlateEncode
+```
+
+For mono (i.e. black and white) images, specify:
+
+```latex
+-dMonoImageFilter=/FlateEncode
+```
+
+These options will make it possible to use the lossless compression from GhostScript and more details about these options can be found [here](http://www.peteryu.ca/tutorials/publishing/pdf_manipulation_tips), and [here](http://superuser.com/questions/360216/use-ghostscript-but-tell-it-to-not-reprocess-images).
+
+So if there is a file with gray scale and colour images, and resampling to 150 dpi with lossless compression is required, the following command can be used (again, Windows example, but should be similar of other systems):
+
+```latex
+$ gswin32c.exe -sDEVICE=pdfwrite -dMaxSubsetPct=100 -dPDFSETTINGS=/ebook -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile="outfile.pdf" -dNOPAUSE -dBATCH "infile.pdf"
+```
+
+where
+
+* `outfile.pdf` is the new, compressed file
+* `infile.pdf` is the original file
 
 ### 14. License
 
