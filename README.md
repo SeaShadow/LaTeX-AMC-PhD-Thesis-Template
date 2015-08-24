@@ -605,11 +605,6 @@ So if there is a file with gray scale and colour images, and resampling to 150 d
 $ gswin32c.exe -sDEVICE=pdfwrite -dMaxSubsetPct=100 -dPDFSETTINGS=/ebook -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile="outfile.pdf" -dNOPAUSE -dBATCH "infile.pdf"
 ```
 
-where
-
-* `outfile.pdf` is the new, compressed file
-* `infile.pdf` is the original file
-
 ### 14. License
 
 This software is free and is covered under the MIT License, given here:
