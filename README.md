@@ -577,21 +577,21 @@ More details about this PDF compression method can be found [here](http://tex.st
 
 If lossless compression instead of lossy compression is required, there are some options which can be considered which are:
 
-For colour images:
+For __colour__ images:
 
 ```latex
 -dAutoFilterColorImages=false
 -dColorImageFilter=/FlateEncode
 ```
 
-For grayscale images:
+For __grayscale__ images:
 
 ```latex
 -dAutoFilterGrayImages=false
 -dGrayImageFilter=/FlateEncode
 ```
 
-For mono (i.e. black and white) images, specify:
+For __mono__ (i.e. black and white) images, specify:
 
 ```latex
 -dMonoImageFilter=/FlateEncode
