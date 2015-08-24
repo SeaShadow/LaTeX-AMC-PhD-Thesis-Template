@@ -19,7 +19,8 @@ LaTeX thesis template for University of Tasmania (UTas) Master or PhD thesis. Th
 * [10. Some Useful LaTeX Scripts](#10-some-useful-latex-scripts)
 * [11. Useful Online Tools](#11-useful-online-tools)
 * [12. Other Useful Links](#12-other-useful-links)
-* [13. License](#13-license)
+* [13. Compress PDF](#13-compress-pdf)
+* [14. License](#14-license)
 
 ### 1. Title Page
 
@@ -534,7 +535,45 @@ As more extensive list of editors can be found in this post here [StackExchange 
 * [The Comprehensive LATEX Symbol List](http://ctan.unsw.edu.au/info/symbols/comprehensive/symbols-letter.pdf)
 * [Strategies for including graphics in LATEX documents](http://www.tug.org/TUGboat/tb26-1/hoeppner.pdf)
 
-### 13. License
+### 13. Compress PDF
+
+Often the PDF of your manuscript produced straight from `pdfTeX` is very large. This is especially the case when you are preparing for submission to a journal, which will require that color graphics be a certain dots per inch (dpi). The simplest way to compress a PDF is to use [Ghostscript (gs)](http://www.Ghostscript.com/). When using LaTex frameworks such as MiKTeX, Ghostscript will be installed by default, otherwise Ghostscript can be installed manually using the using the downloads available [here](http://Ghostscript.com/download/).
+
+The command used to compress a PDF using Ghostscript is (i.e. using command line):
+
+```latex
+$ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=filename-compressed.pdf filename.pdf
+```
+
+where
+
+* `filename-compressed.pdf` is the new, compressed file
+* `filename.pdf` is the original file
+
+The achievable file compression should be somewhere in the range of 60-70%. More details about this PDF compression method can be found [here](http://tex.stackexchange.com/questions/18987/how-to-make-the-pdfs-produced-by-pdflatex-smaller).
+
+If there is the need to specify the DPI (dots per inch) in the Ghostscript compression process the following command can be used (shown as a Windows command as an example):
+
+```latex
+$ gswin32c.exe -sDEVICE=pdfwrite -dMaxSubsetPct=100 -dPDFSETTINGS=/prepress -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile="outfile.pdf" -dNOPAUSE -dBATCH "infile.pdf"
+```
+
+where
+
+* `outfile.pdf` is the new, compressed file
+* `infile.pdf` is the original file
+
+Ghostscript resamples to a given dpi based on dPDFSETTINGS:
+
+* `/prepress` (300 dpi)
+* `/printer` (300 dpi)
+* `/ebook` (150 dpi)
+* `/screen` (72 dpi)
+* `/default` (default dpi setting)
+
+More details about this PDF compression method can be found [here](http://tex.stackexchange.com/questions/73444/can-pdflatex-or-any-tex-package-automatically-rescale-included-images-which-ha), [here (part 1)](http://www.peteryu.ca/tutorials/publishing/pdf_manipulation_tips), and [here (part 2)](http://www.peteryu.ca/tutorials/publishing/pdf_manipulation_tips2).
+
+### 14. License
 
 This software is free and is covered under the MIT License, given here:
 
